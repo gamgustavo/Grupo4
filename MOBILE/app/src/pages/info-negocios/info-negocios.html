@@ -1,0 +1,108 @@
+<ion-header >
+  <ion-navbar color="dark">
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        CONTABILIZACION
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="listar_productos()">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-navbar>   
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+
+
+  <ion-card-content>
+    <button ion-button class="button button3" >Ingreso de lo Contabilizado del dia:</button>
+    <button ion-button class="button button3" >Debe Ingresar los datos De los</button>
+    <button ion-button class="button button3" >Productos que desea monitorear </button>
+  </ion-card-content>
+
+
+  <form [formGroup]="myForm" (ngSubmit)="saveData()">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="md-pricetags" item-start></ion-icon>
+        <ion-label stacked>Nombre del Negocio: {{item.negocio_nombre}}  </ion-label>
+        <ion-input formControlName="nombre_negocio" value ="{{item.negocio_id}}" type="text" placeholder="Nombre del Negocio" [disabled]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="md-pin" item-start></ion-icon>
+        <ion-label stacked>Producto:</ion-label>
+        <ion-select    formControlName="producto">
+          <ion-option ion-item *ngFor="let item_producto of lista_productos" value="{{ item_producto.producto_codigo }}"> {{ item_producto.producto_codigo_propio }} - {{ item_producto.producto_nombre  }}  </ion-option>
+        </ion-select>
+
+      </ion-item>
+      <ion-item>
+        <ion-icon name="md-document" item-start></ion-icon>
+        <ion-label stacked>Cantidad: </ion-label>
+        <ion-input type="number" formControlName="cantidad"  placeholder="Ingrese Cantidad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="calendar" item-start></ion-icon>
+        <ion-label stacked>Fecha:</ion-label>
+        <ion-datetime formControlName="fecha" displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY"></ion-datetime>
+      </ion-item>
+      
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar contabilizacion del Dia</button>
+    </div>
+  </form>
+
+
+<ion-card>
+
+  <ion-card-content>
+    <button ion-button class="button button3" >Aqui encuentra informacion</button>
+    <button ion-button class="button button3" >De lo que actualmente </button>
+    <button ion-button class="button button3" >Debe Tener Almacenado en Bodega</button>
+  </ion-card-content>
+
+</ion-card>
+
+ 
+  <ion-list >        
+
+      <button ion-item *ngFor="let item of estado_stock"  class="button button4" icon-start>
+        
+        <ion-card-content>
+            <h4  style="font-size: 20px; font-weight:bold ">  {{ item.producto }} </h4>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon name='md-pin' item-start style="color: #000000"></ion-icon>
+          Cantidad: {{ item.cantida }}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='md-cash' item-start style="color: #000000"></ion-icon>
+          Precio Unitario: {{ item.precio_unitario }}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='md-cash' item-start style="color: #000000"></ion-icon>
+          Precio Total: {{ item.precio_total }}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='calendar' item-start style="color: #000000"></ion-icon>
+          Fecha: {{ item.fecha }}
+        </ion-item>
+
+      </button>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Registrar Nuevo Negocio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+  <form [formGroup]="myForm" (ngSubmit)="saveData()">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="md-pricetags" item-start></ion-icon>
+        <ion-label stacked>Nombre del Negocio:</ion-label>
+        <ion-input formControlName="negocio_nombre" type="text" placeholder="Nombre del Negocio"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="md-pin" item-start></ion-icon>
+        <ion-label stacked>Ubicacion del Negocio:</ion-label>
+        <ion-input formControlName="negocio_ubicacion" type="text" placeholder="Ubicacion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="md-document" item-start></ion-icon>
+        <ion-label stacked>Descripcion</ion-label>
+        <ion-textarea formControlName="descripcion"  placeholder="Enter a description"></ion-textarea>
+      </ion-item>
+      
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
+    </div>
+  </form>
+</ion-content>
