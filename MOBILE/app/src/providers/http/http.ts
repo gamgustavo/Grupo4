@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class HttpProvider {
 
-  ruta_base : string = 'http://172.16.177.86:8000/';
+  ruta_base : string = 'http://35.237.152.46/';
   ruta_listar_cursos: string ='Devolver_Cursos';
   
   constructor(public http: HttpClient) {

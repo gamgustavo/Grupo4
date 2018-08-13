@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ProfesorPlanificacionPage page.
+ * Generated class for the ProfesorActividadPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,19 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-profesor-planificacion',
-  templateUrl: 'profesor-planificacion.html',
+  selector: 'page-profesor-actividad',
+  templateUrl: 'profesor-actividad.html',
 })
-export class ProfesorPlanificacionPage {
+export class ProfesorActividadPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfesorPlanificacionPage');
+    console.log('ionViewDidLoad ProfesorActividadPage');
   }
-  subirDoc(){}
-  verDoc(){}
-
 
 }

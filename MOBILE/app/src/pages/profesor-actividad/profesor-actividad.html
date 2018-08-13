@@ -1,5 +1,5 @@
 <!--
-  Generated template for the ProfesorPlanificacionPage page.
+  Generated template for the ProfesorActividadPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -11,7 +11,7 @@
         <ion-icon name="menu"></ion-icon>
       </button>
       <ion-title>
-        Planificacion
+        Actividades
       </ion-title>
       <ion-buttons end>
         <button ion-button icon-only (click)="listar_mensajes()">
@@ -26,9 +26,13 @@
 
 <ion-content class="login-content" padding>
   
-  <button ion-button color="light" (click)="subirDoc()">Subir Planificacion</button>
+  <ion-fab bottom right >
+    <button ion-fab (click)="nuevo_mensaje()">
+      <ion-icon name="md-add">
+      </ion-icon>
+    </button>
+  </ion-fab>
 
-  <button ion-button color="dark" (click)= "verDoc()">Ver Planificacion</button>
 
 
 
