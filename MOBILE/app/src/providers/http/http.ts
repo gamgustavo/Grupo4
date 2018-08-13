@@ -11,9 +11,10 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class HttpProvider {
 
-  ruta_base : string = 'http://172.16.177.86:8000/';
+  ruta_base : string = 'http://35.237.152.46/';
   ruta_listar_cursos: string ='Devolver_Cursos';
-  
+  ruta_listar_actividades: string = 'Devolver_Cursos';
+  ruta_listar_notas_curso : string ='Devolver_Cursos';
   constructor(public http: HttpClient) {
     console.log('Hello HttpProvider Provider');
 
@@ -24,6 +25,20 @@ export class HttpProvider {
     return this.http
     .get(path_aux)
     .toPromise();    
+  }
+  listar_actividades(){
+    let path_aux  = this.ruta_base  + this.ruta_listar_actividades;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();  
+  }
+  listar_alumnos_notas(codigo_curso :string){
+    let path_aux  = this.ruta_base  + this.ruta_listar_notas_curso;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();  
   }
 
 

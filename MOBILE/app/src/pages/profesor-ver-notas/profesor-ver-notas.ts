@@ -18,9 +18,10 @@ import { ProfesorVerNotasCursoPage } from "../profesor-ver-notas-curso/profesor-
 export class ProfesorVerNotasPage {
 
   lista_cursos: any[];
-
+  nombre : string;
   constructor(public navCtrl: NavController, public navParams: NavParams,public alerCtrl: AlertController, public formBuilder: FormBuilder, public http: HttpProvider) {
     console.log('entrando aqui');
+    this.nombre = "";
     this.listar_notas();
   }
 

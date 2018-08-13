@@ -34,6 +34,7 @@ import { PadreVerMensajesPage } from "../pages/padre-ver-mensajes/padre-ver-mens
 import { PadresVerNotasHijosPage } from "../pages/padres-ver-notas-hijos/padres-ver-notas-hijos";
 import { ProfesorPlanificacionPage } from "../pages/profesor-planificacion/profesor-planificacion";
 import { ProfesorVerNotasCursoPage } from "../pages/profesor-ver-notas-curso/profesor-ver-notas-curso";
+import { ProfesorActividadPage } from '../pages/profesor-actividad/profesor-actividad';
 
 
 
@@ -63,7 +64,8 @@ import { ProfesorVerNotasCursoPage } from "../pages/profesor-ver-notas-curso/pro
     ProfesorMensajePadresPage,
     ProfesorVerNotasPage,
     ProfesorPlanificacionPage,
-    ProfesorVerNotasCursoPage
+    ProfesorVerNotasCursoPage,
+    ProfesorActividadPage
   ],
   imports: [
     BrowserModule,
@@ -96,7 +98,8 @@ import { ProfesorVerNotasCursoPage } from "../pages/profesor-ver-notas-curso/pro
     ProfesorMensajePadresPage,
     ProfesorVerNotasPage,
     ProfesorPlanificacionPage,
-    ProfesorVerNotasCursoPage
+    ProfesorVerNotasCursoPage,
+    ProfesorActividadPage
   ],
   providers: [
     StatusBar,
