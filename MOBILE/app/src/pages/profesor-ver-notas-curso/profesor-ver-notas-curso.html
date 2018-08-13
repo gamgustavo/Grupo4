@@ -30,29 +30,19 @@
                 NOTA
               </ion-col>
         </ion-row>
-    <ion-list>
+    <ion-list *ngFor="let item of lista_alumno_nota" no-lines>
       <ion-row  >
         <ion-col class="iboriti">
-          v1
+          {{ item.Nombre }}
         </ion-col>
         <ion-col class="iboriti">
-            v2
+          {{ item.Nombre }}
           </ion-col >
           <ion-col class="iboriti">
-              v3
+            {{ item.Nombre }}
             </ion-col>
       </ion-row>
-      <ion-row>
-          <ion-col class="iboriti">
-            v1
-          </ion-col>
-          <ion-col class="iboriti">
-              v2
-            </ion-col >
-            <ion-col class="iboriti">
-                v3
-              </ion-col>
-        </ion-row>
+     
     </ion-list>
     </ion-grid>
 

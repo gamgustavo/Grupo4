@@ -33,7 +33,7 @@ export class HttpProvider {
     .get(path_aux)
     .toPromise();  
   }
-  listar_alumnos_notas(codigo_curso :string){
+  listar_alumnos_notas(){
     let path_aux  = this.ruta_base  + this.ruta_listar_notas_curso;
     console.log(path_aux);
     return this.http

@@ -38,7 +38,7 @@ export class ProfesorVerNotasCursoPage {
 
   listar_notas_curso(){
     try{
-      this.http.listar_alumnos_notas(this.identificador_curso).then(
+      this.http.listar_alumnos_notas().then(
         (res) => {
           console.log("listar_notas");
           this.lista_alumno_nota = JSON.parse(JSON.stringify(res));
