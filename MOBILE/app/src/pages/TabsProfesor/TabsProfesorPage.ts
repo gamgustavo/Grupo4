@@ -4,6 +4,7 @@ import { ProfesorCrearJuegoPage } from "../profesor/profesor-crear-juego/profeso
 import { ProfesorVerNotasPage } from "../profesor/profesor-ver-notas/profesor-ver-notas";
 import { ProfesorMensajePadresPage } from "../profesor/profesor-mensaje-padres/profesor-mensaje-padres";
 import { ProfesorPlanificacionPage } from "../profesor/profesor-planificacion/profesor-planificacion";
+import { ProfesorActividadPage } from '../profesor/profesor-actividad/profesor-actividad';
 
 
 
@@ -18,6 +19,8 @@ export class TabsProfesorPage {
   tab2Root = ProfesorVerNotasPage;  
   tab4Root = ProfesorMensajePadresPage;
   tab5Root = ProfesorPlanificacionPage;
+  tab6Root = ProfesorActividadPage;
+
   public tabsparams: String;
   
   constructor( public navParams: NavParams) {

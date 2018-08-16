@@ -21,5 +21,6 @@ export class ProfesorPlanificacionPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfesorPlanificacionPage');
   }
-
+  subirDoc(){} 
+  verDoc(){} 
 }
