@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { HttpProvider } from "../../providers/http/http";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProfesorVerNotasCursoPage } from "../profesor-ver-notas-curso/profesor-ver-notas-curso";
+import { HttpProvider } from "../../../providers/http/http";
 /**
  * Generated class for the ProfesorVerNotasPage page.
  *
@@ -20,7 +20,6 @@ export class ProfesorVerNotasPage {
   lista_cursos: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public alerCtrl: AlertController, public formBuilder: FormBuilder, public http: HttpProvider) {
-    console.log('entrando aqui');
     this.listar_notas();
   }
 

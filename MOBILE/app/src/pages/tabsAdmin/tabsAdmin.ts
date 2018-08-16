@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import {YoutubePage} from '../youtube/youtube';
+import { ProfesorCrearJuegoPage } from "../profesor/profesor-crear-juego/profesor-crear-juego";
+
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class tabsAdminPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-  tab4Root = YoutubePage;
+  tab1Root = ProfesorCrearJuegoPage;
+  tab2Root = ProfesorCrearJuegoPage;
+  tab3Root = ProfesorCrearJuegoPage;
+  tab4Root = ProfesorCrearJuegoPage;
 
   public tabsparams: String;
   
