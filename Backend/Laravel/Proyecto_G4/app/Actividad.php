@@ -4,18 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Nota extends Model
+class Actividad extends Model
 {
-    protected $table = 'Nota';
+    protected $table = 'Actividades';
 
-    protected $primaryKey = 'idNota';
+    protected $primaryKey = 'idActividades';
 
     public $timestamps = false;
     public $incrementing = false;
 
     protected $fillable = [
-    	'Nota',
-    	'idAsignacion',
+    	'Nombre',
+    	'Descripcion',
+    	'Fecha',
+    	'Curso_idCurso',
     ];
 
     protected $guarded = [

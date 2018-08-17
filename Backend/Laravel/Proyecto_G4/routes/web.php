@@ -21,12 +21,5 @@ Route::get('Devolver_Estudiantes', 'MasterDeveloper@DevolverEstudiantes');
 Route::get('Nota_Curso/{id}', 'MasterDeveloper@DevolverNotasCurso');
 Route::get('Insertar_Nota', 'MasterDeveloper@InsertarNota');
 Route::get('Modificar_Nota', 'MasterDeveloper@ModificarNota');
-
-
-Route::get('Ingreso_Notas', 'Developer2@Ingreso_Notas');
-
-
-Route::get('Listado_Notas', 'Developer3@Listado_Notas');
-
-
-Route::get('Modificar_Nota', 'Developer4@Modificar_Nota');
+Route::get('Insertar_Actividad', 'MasterDeveloper@InsertarActividad');
+Route::get('Devolver_Actividad/{id}', 'MasterDeveloper@DevolverActividad');
