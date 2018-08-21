@@ -1,0 +1,27 @@
+<?php
+
+namespace Tests\Unit;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class TestdeLaravel extends TestCase
+{
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+  
+    
+    public function testsuma(){
+    	$prueba = new PruebaLaravel();
+        $this->assertEquals(10,$prueba->suma(5,5));
+    }
+
+
+    public function testmultiplicacion(){
+        $prueba = new PruebaLaravel();
+        $this->assertEquals(25,$prueba->multiplicacion(5,5));
+    }
+}
