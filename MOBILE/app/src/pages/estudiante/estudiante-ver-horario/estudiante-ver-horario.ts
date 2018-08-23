@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { HttpProvider } from '../../../providers/http/http';
 
 /**
- * Generated class for the AdminVerMaestrosPage page.
+ * Generated class for the EstudianteVerHorarioPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,26 +11,23 @@ import { HttpProvider } from '../../../providers/http/http';
 
 @IonicPage()
 @Component({
-  selector: 'page-admin-ver-maestros',
-  templateUrl: 'admin-ver-maestros.html',
+  selector: 'page-estudiante-ver-horario',
+  templateUrl: 'estudiante-ver-horario.html',
 })
+export class EstudianteVerHorarioPage {
 
-
-export class AdminVerMaestrosPage {
-
-  lista_maestros : any[];
+  lista_horario: any[]; 
 
   constructor(public navCtrl: NavController , public navParams: NavParams,public http: HttpProvider,public alerCtrl: AlertController) {
-    this.listar_maestros();
+    this.listar_horario();
   }
 
-  listar_maestros(){
+  listar_horario(){
     try{
-      this.http.listar_maestros().then(
+      this.http.listar_horario(1).then(
         (res) => {
-          console.log("listar_maestros");
-          this.lista_maestros = JSON.parse(JSON.stringify(res));
-          console.log(this.lista_maestros);
+          this.lista_horario = JSON.parse(JSON.stringify(res));
+          console.log(this.listar_horario);
         },
         (error) =>{
           console.log(error);
@@ -41,17 +38,17 @@ export class AdminVerMaestrosPage {
     }
   }
 
-  doAlert(titulo: String, mensaje:String) {
-    let alert = this.alerCtrl.create({
-      title: String(titulo),
-      message: String(mensaje),
-      buttons: ['Ok']
-    });
-    alert.present()
-  }  
-
+    doAlert(titulo: String, mensaje:String) {
+      let alert = this.alerCtrl.create({
+        title: String(titulo),
+        message: String(mensaje),
+        buttons: ['Ok']
+      });
+      alert.present()
+    }  
+    
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AdminVerMaestrosPage');
+    console.log('ionViewDidLoad EstudianteVerHorarioPage');
   }
 
 }

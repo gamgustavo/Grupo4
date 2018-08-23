@@ -26,6 +26,13 @@ import { ProfesorVerNotasPage } from "../pages/profesor/profesor-ver-notas/profe
 import { ProfesorVerNotasCursoPage } from "../pages/profesor/profesor-ver-notas-curso/profesor-ver-notas-curso";
 import { ProfesorActividadPage } from '../pages/profesor/profesor-actividad/profesor-actividad';
 import { ProfesorVerActividadesCursoPage } from '../pages/profesor/profesor-ver-actividades-curso/profesor-ver-actividades-curso';
+import { EstudianteVerHorarioPage } from '../pages/estudiante/estudiante-ver-horario/estudiante-ver-horario';
+import { PadreVerHorarioHijoPage } from '../pages/padre/padre-ver-horario-hijo/padre-ver-horario-hijo';
+import { EstudianteVerNotasPage } from '../pages/estudiante/estudiante-ver-notas/estudiante-ver-notas';
+import { AdminVerMaestrosPage } from '../pages/admin/admin-ver-maestros/admin-ver-maestros';
+import { EstudianteVerNotasOrdenPageModule } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden.module';
+import { EstudianteVerNotasOrdenPage } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden';
+import { AdminAsignarMaestroPage } from '../pages/admin/admin-asignar-maestro/admin-asignar-maestro';
 
 
 
@@ -49,8 +56,13 @@ import { ProfesorVerActividadesCursoPage } from '../pages/profesor/profesor-ver-
     ProfesorPlanificacionPage,
     ProfesorVerNotasCursoPage,
     ProfesorActividadPage,
-    ProfesorVerActividadesCursoPage
-  
+    ProfesorVerActividadesCursoPage,
+    EstudianteVerHorarioPage,
+    PadreVerHorarioHijoPage,
+    EstudianteVerNotasPage,
+    AdminVerMaestrosPage,
+    EstudianteVerNotasOrdenPage,
+    AdminAsignarMaestroPage
   ],
   imports: [
     BrowserModule,
@@ -77,8 +89,13 @@ import { ProfesorVerActividadesCursoPage } from '../pages/profesor/profesor-ver-
     ProfesorPlanificacionPage,
     ProfesorVerNotasCursoPage,
     ProfesorActividadPage,
-    ProfesorVerActividadesCursoPage
-  
+    ProfesorVerActividadesCursoPage,
+    EstudianteVerHorarioPage,
+    PadreVerHorarioHijoPage,
+    EstudianteVerNotasPage,
+    AdminVerMaestrosPage,
+    EstudianteVerNotasOrdenPage,
+    AdminAsignarMaestroPage
   ],
   providers: [
     StatusBar,

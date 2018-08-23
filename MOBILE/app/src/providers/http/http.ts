@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class HttpProvider {
 
-  ruta_base : string = 'http://10.50.14.101:8000/';
+  ruta_base : string = 'http://35.237.152.46/';
   ruta_listar_cursos: string ='Devolver_Cursos';
   ruta_nota_curso: String = 'Nota_Curso';
   ruta_actividad_curso : String = 'Actividad_Curso';
@@ -19,11 +19,65 @@ export class HttpProvider {
   ruta_listar_actividades: string = 'Devolver_Actividad'; 
   ruta_listar_notas_curso : string ='Devolver_Cursos'; 
   ruta_Insertar_Nota = 'Insertar_Nota';
-  
+  ruta_listar_horario= 'Nota_Curso';
+  ruta_listar_hijos = "Devolver_Cursos";
+  ruta_listar_notas_estudiante = "Nota_Curso";
+  ruta_listar_maestros = "Devolver_Cursos";
+  ruta_listar_notas_desc= "Nota_Curso";
+  ruta_asignar_profesor = "Asignar_Profesor";
+
   constructor(public http: HttpClient) {
     console.log('Hello HttpProvider Provider');
-
   }
+
+  asignar_profesor(profesor,curso){
+    let path_aux  = this.ruta_base  + this.ruta_asignar_profesor + '?idCurso='+curso+'&idCatedratico='+profesor;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise(); 
+  }
+
+  listar_notas_desc(id){
+    let path_aux  = this.ruta_base  + this.ruta_listar_notas_desc+ '/' + id;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();
+  }
+
+  listar_maestros(){
+    let path_aux  = this.ruta_base  + this.ruta_listar_maestros;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();    
+  }
+
+  listar_notas_estudiante(id){
+    let path_aux  = this.ruta_base  + this.ruta_listar_notas_estudiante + '/' + id;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();   
+  }
+
+  listar_hijos(){
+    let path_aux  = this.ruta_base  + this.ruta_listar_hijos;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();    
+  }
+
+  listar_horario(id){
+    let path_aux  = this.ruta_base  + this.ruta_listar_horario + '/' + id;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();    
+  }
+
   listar_actividades(id){
     let path_aux  = this.ruta_base  + this.ruta_listar_actividades + '/' + id;
     console.log(path_aux);
