@@ -68,4 +68,30 @@ class MasterDeveloper extends Controller
         $Actividad->save();
 
     }
+
+    public function DevolverListadoHijos($id){
+        return DB::select('select E.nombre, E.idEstudiante from Estudiante E, Padre P where E.idPadre = P.idPadre and P.idPadre = :id', ['id' => $id]);
+    }
+
+    public function DevolverNotaEstudiante($id){
+        return DB::select('select C.Nombre, N.Nota from Curso C, Nota N, Estudiante E, Asignacion A where E.idEstudiante = :id and A.idEstudiante = E.idEstudiante and C.idCurso = A.idCurso and N.idAsignacion = A.idAsignacion;', ['id' => $id]);
+    }
+
+    public function DevolverMejoresNotas(){
+        return DB::select('select C.Nombre, N.Nota from Curso C, Nota N, Asignacion A where A.idCurso = C.idCurso and N.idAsignacion = A.idAsignacion order by N.Nota desc;');
+    }
+
+    public function DevolverCatedraticos(){
+        return DB::select('select Catedratico.idCatedratico, catedratico.Nombre from catedratico;');
+    }
+
+    public function DevolverHorarioEstudiante($id){
+        return DB::select('select H.Salon, H.Dias, H.Hora, C.Nombre from Estudiante E, HorarioEstudiante H, Curso C where H.idCurso = C.idCurso and E.idEstudiante = :id and H.idEstudiante = E.idEstudiante', ['id' => $id]);
+    }
+
+    public function InsertarAsignacionCatedratico(Request $request){
+        $Asignar = DB::select('insert into AsignacionCatedratico values (:idCurso,:idCatedratico)', ['idCurso' => $request->input('idCurso'), 'idCatedratico' => $request->input('idCatedratico') ] );
+        return 1;
+
+    }
 }
