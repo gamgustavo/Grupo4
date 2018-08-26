@@ -1,0 +1,59 @@
+<ion-header >
+  <ion-navbar color="dark">
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        RECOMENDACIONES
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="listar_stock_actual()">
+          <ion-icon name="md-refresh"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-navbar>   
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+
+ 
+  <ion-list >        
+
+      <button ion-item *ngFor="let item of estado_stock"  class="button {{item.color}}" icon-start>
+        
+        <ion-card-content>
+            <h4  style="font-size: 20px; font-weight:bold ">  {{ item.recomendacion }} </h4>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon name='md-cash' item-start style="color: #000000"></ion-icon>
+          Negocio: {{ item.negocio }}
+        </ion-item>        
+
+        <ion-item>
+          <ion-icon name='md-attach' item-start style="color: #000000"></ion-icon>
+          Producto: {{ item.producto }}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='md-checkmark-circle' item-start style="color: #000000"></ion-icon>
+          Cantidad en Bodega:{{ item.cantidad }}
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='md-cube' item-start style="color: #000000"></ion-icon>
+          Promedio Venta:{{ item.promedio_venta }}
+        </ion-item>
+
+
+
+
+      </button>
+
+  </ion-list>
+
+
+</ion-content>
