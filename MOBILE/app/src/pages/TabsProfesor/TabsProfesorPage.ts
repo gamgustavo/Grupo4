@@ -6,7 +6,6 @@ import { ProfesorVerModificarNotaPage } from "../profesor-ver-modificar-nota/pro
 import { ProfesorVerNotasPage } from "../profesor-ver-notas/profesor-ver-notas";
 import { ProfesorMensajePadresPage } from "../profesor-mensaje-padres/profesor-mensaje-padres";
 import { ProfesorPlanificacionPage } from "../profesor-planificacion/profesor-planificacion";
-import { ProfesorActividadPage } from '../profesor-actividad/profesor-actividad';
 
 
 
@@ -20,9 +19,6 @@ export class TabsProfesorPage {
   tab2Root = ProfesorVerNotasPage;  
   tab4Root = ProfesorMensajePadresPage;
   tab5Root = ProfesorPlanificacionPage;
-  tab6Root = ProfesorActividadPage;
-
-  
   public tabsparams: String;
   
   constructor( public navParams: NavParams) {
