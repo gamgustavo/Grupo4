@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import {YoutubePage} from '../youtube/youtube';
-import { PadresListadoHijosPage } from "../padres-listado-hijos/padres-listado-hijos";
-import { PadreVerMensajesPage } from "../padre-ver-mensajes/padre-ver-mensajes";
-import { PadresVerNotasHijosPage } from "../padres-ver-notas-hijos/padres-ver-notas-hijos";
+import { PadresListadoHijosPage } from "../padre/padres-listado-hijos/padres-listado-hijos";
+import { PadreVerMensajesPage } from "../padre/padre-ver-mensajes/padre-ver-mensajes";
+import { PadresVerNotasHijosPage } from "../padre/padres-ver-notas-hijos/padres-ver-notas-hijos";
+import { PadreVerHorarioHijoPage } from '../padre/padre-ver-horario-hijo/padre-ver-horario-hijo';
+
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,6 +14,7 @@ export class tabsPadrePage {
   tab1Root = PadresListadoHijosPage;
   tab2Root = PadreVerMensajesPage;
   tab3Root = PadresVerNotasHijosPage;
+  tab4Root = PadreVerHorarioHijoPage;
 
   public tabsparams: String;
   

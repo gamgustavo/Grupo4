@@ -4,51 +4,41 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { YoutubePage } from '../pages/youtube/youtube';
 import { TabsPage } from '../pages/tabs/tabs';
-import { InfoNegociosPage } from '../pages/info-negocios/info-negocios'
-import { NuevoNegocioPage } from '../pages/nuevo-negocio/nuevo-negocio'
 import { UsuarioRegistroPage } from '../pages/usuario-registro/usuario-registro'
-
-import { InfoProductoPage } from '../pages/info-producto/info-producto'
-import { NuevoProductoPage } from '../pages/nuevo-producto/nuevo-producto'
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpProvider } from '../providers/http/http';
 import { HttpClientModule } from '@angular/common/http';
 import { TabsProfesorPage } from "../pages/TabsProfesor/TabsProfesorPage";
-import { ProfesorCrearJuegoPage } from "../pages/profesor-crear-juego/profesor-crear-juego";
-import { ProfesorVerAgregarNotaPage } from "../pages/profesor-ver-agregar-nota/profesor-ver-agregar-nota";
-import { ProfesorVerModificarNotaPage } from "../pages/profesor-ver-modificar-nota/profesor-ver-modificar-nota";
-import { ProfesorVerNotasPage } from "../pages/profesor-ver-notas/profesor-ver-notas";
 import { tabsEstudiantePage } from "../pages/tabsEstudiante/tabsEstudiante";
 import { tabsPadrePage } from "../pages/tabsPadre/tabsPadre";
 import { tabsAdminPage } from "../pages/tabsAdmin/tabsAdmin";
-import { ProfesorMensajePadresPage } from "../pages/profesor-mensaje-padres/profesor-mensaje-padres";
-import { PadresListadoHijosPage } from "../pages/padres-listado-hijos/padres-listado-hijos";
-import { PadreVerMensajesPage } from "../pages/padre-ver-mensajes/padre-ver-mensajes";
-import { PadresVerNotasHijosPage } from "../pages/padres-ver-notas-hijos/padres-ver-notas-hijos";
-import { ProfesorPlanificacionPage } from "../pages/profesor-planificacion/profesor-planificacion";
-import { ProfesorVerNotasCursoPage } from "../pages/profesor-ver-notas-curso/profesor-ver-notas-curso";
-import { ProfesorActividadPage } from '../pages/profesor-actividad/profesor-actividad';
+import { PadresListadoHijosPage } from "../pages/padre/padres-listado-hijos/padres-listado-hijos";
+import { PadreVerMensajesPage } from "../pages/padre/padre-ver-mensajes/padre-ver-mensajes";
+import { PadresVerNotasHijosPage } from "../pages/padre/padres-ver-notas-hijos/padres-ver-notas-hijos";
+import { ProfesorCrearJuegoPage } from "../pages/profesor/profesor-crear-juego/profesor-crear-juego";
+import { ProfesorVerAgregarNotaPage } from "../pages/profesor/profesor-ver-agregar-nota/profesor-ver-agregar-nota";
+import { ProfesorVerModificarNotaPage } from "../pages/profesor/profesor-ver-modificar-nota/profesor-ver-modificar-nota";
+import { ProfesorMensajePadresPage } from "../pages/profesor/profesor-mensaje-padres/profesor-mensaje-padres";
+import { ProfesorPlanificacionPage } from "../pages/profesor/profesor-planificacion/profesor-planificacion";
+import { ProfesorVerNotasPage } from "../pages/profesor/profesor-ver-notas/profesor-ver-notas";
+import { ProfesorVerNotasCursoPage } from "../pages/profesor/profesor-ver-notas-curso/profesor-ver-notas-curso";
+import { ProfesorActividadPage } from '../pages/profesor/profesor-actividad/profesor-actividad';
+import { ProfesorVerActividadesCursoPage } from '../pages/profesor/profesor-ver-actividades-curso/profesor-ver-actividades-curso';
+import { EstudianteVerHorarioPage } from '../pages/estudiante/estudiante-ver-horario/estudiante-ver-horario';
+import { PadreVerHorarioHijoPage } from '../pages/padre/padre-ver-horario-hijo/padre-ver-horario-hijo';
+import { EstudianteVerNotasPage } from '../pages/estudiante/estudiante-ver-notas/estudiante-ver-notas';
+import { AdminVerMaestrosPage } from '../pages/admin/admin-ver-maestros/admin-ver-maestros';
+import { EstudianteVerNotasOrdenPageModule } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden.module';
+import { EstudianteVerNotasOrdenPage } from '../pages/estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden';
+import { AdminAsignarMaestroPage } from '../pages/admin/admin-asignar-maestro/admin-asignar-maestro';
 
 
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    YoutubePage,
-    InfoNegociosPage,
-    NuevoNegocioPage,
-    InfoProductoPage,
-    NuevoProductoPage,
     UsuarioRegistroPage,
     TabsPage,
     TabsProfesorPage,
@@ -65,7 +55,14 @@ import { ProfesorActividadPage } from '../pages/profesor-actividad/profesor-acti
     ProfesorVerNotasPage,
     ProfesorPlanificacionPage,
     ProfesorVerNotasCursoPage,
-    ProfesorActividadPage
+    ProfesorActividadPage,
+    ProfesorVerActividadesCursoPage,
+    EstudianteVerHorarioPage,
+    PadreVerHorarioHijoPage,
+    EstudianteVerNotasPage,
+    AdminVerMaestrosPage,
+    EstudianteVerNotasOrdenPage,
+    AdminAsignarMaestroPage
   ],
   imports: [
     BrowserModule,
@@ -75,14 +72,6 @@ import { ProfesorActividadPage } from '../pages/profesor-actividad/profesor-acti
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    YoutubePage,
-    InfoNegociosPage,
-    NuevoNegocioPage,
-    InfoProductoPage,
-    NuevoProductoPage,
     UsuarioRegistroPage,
     TabsPage,
     TabsProfesorPage,
@@ -99,7 +88,14 @@ import { ProfesorActividadPage } from '../pages/profesor-actividad/profesor-acti
     ProfesorVerNotasPage,
     ProfesorPlanificacionPage,
     ProfesorVerNotasCursoPage,
-    ProfesorActividadPage
+    ProfesorActividadPage,
+    ProfesorVerActividadesCursoPage,
+    EstudianteVerHorarioPage,
+    PadreVerHorarioHijoPage,
+    EstudianteVerNotasPage,
+    AdminVerMaestrosPage,
+    EstudianteVerNotasOrdenPage,
+    AdminAsignarMaestroPage
   ],
   providers: [
     StatusBar,

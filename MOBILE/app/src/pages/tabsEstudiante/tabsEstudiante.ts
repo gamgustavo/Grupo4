@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
-import {YoutubePage} from '../youtube/youtube';
+import { ProfesorPlanificacionPage } from "../profesor/profesor-planificacion/profesor-planificacion";
+import { EstudianteVerHorarioPage } from '../estudiante/estudiante-ver-horario/estudiante-ver-horario';
+import { EstudianteVerNotasPage } from '../estudiante/estudiante-ver-notas/estudiante-ver-notas';
+import { EstudianteVerNotasOrdenPage } from '../estudiante/estudiante-ver-notas-orden/estudiante-ver-notas-orden';
+
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class tabsEstudiantePage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-  tab4Root = YoutubePage;
+  tab1Root = EstudianteVerHorarioPage;
+  tab2Root = EstudianteVerNotasPage;
+  tab3Root = ProfesorPlanificacionPage;
+  tab4Root = EstudianteVerNotasOrdenPage;
 
   public tabsparams: String;
   
