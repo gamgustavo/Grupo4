@@ -19,12 +19,12 @@ export class HttpProvider {
   ruta_listar_actividades: string = 'Devolver_Actividad'; 
   ruta_listar_notas_curso : string ='Devolver_Cursos'; 
   ruta_Insertar_Nota = 'Insertar_Nota';
-  ruta_listar_horario= 'Nota_Curso';
-  ruta_listar_hijos = "Devolver_Cursos";
-  ruta_listar_notas_estudiante = "Nota_Curso";
-  ruta_listar_maestros = "Devolver_Cursos";
-  ruta_listar_notas_desc= "Nota_Curso";
-  ruta_asignar_profesor = "Asignar_Profesor";
+  ruta_listar_horario= 'DevolverHorarioEstudiante';
+  ruta_listar_hijos = "DevolverListadoHijos";
+  ruta_listar_notas_estudiante = "DevolverNotaEstudiante";
+  ruta_listar_maestros = "DevolverCatedraticos";
+  ruta_listar_notas_desc= "DevolverNotaEstudiante";
+  ruta_asignar_profesor = "InsertarAsignacionCatedratico";
 
   constructor(public http: HttpClient) {
     console.log('Hello HttpProvider Provider');
@@ -62,8 +62,8 @@ export class HttpProvider {
     .toPromise();   
   }
 
-  listar_hijos(){
-    let path_aux  = this.ruta_base  + this.ruta_listar_hijos;
+  listar_hijos(id){
+    let path_aux  = this.ruta_base  + this.ruta_listar_hijos+ '/' + id;
     console.log(path_aux);
     return this.http
     .get(path_aux)

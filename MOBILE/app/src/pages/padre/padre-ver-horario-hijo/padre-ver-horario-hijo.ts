@@ -35,7 +35,7 @@ export class PadreVerHorarioHijoPage {
 
  listar_hijos(){
     try{
-      this.http.listar_hijos().then(
+      this.http.listar_hijos(1).then(
         (res) => {
           console.log("listar_hijos");
           this.lista_hijos = JSON.parse(JSON.stringify(res));

@@ -66,21 +66,13 @@ export class AdminAsignarMaestroPage {
     }
   }
 
-  asgnar_catedratico(){
-    let catedratico = String(this.myForm.value.alumno);
+  asignar_catedratico(){
+    let catedratico = String(this.myForm.value.catedratico);
     let curso =  String(this.myForm.value.curso);
     try{
       this.http.asignar_profesor( catedratico, curso).then(
         (res) => {
-          console.log(res['result']);
-          console.log(res['usuario_id']);  
-          let usuario_id = String(res['usuario_id']);        
-          if(res['result'] =='logueado'){
-            this.doAlert('Bienvenido','Datos correctos');
-            
-          }else{
-            this.doAlert('Error','Datos incorrectos');
-          }
+          
         },
         (error) =>{
           console.log(error);    
