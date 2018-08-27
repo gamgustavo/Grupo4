@@ -19,13 +19,15 @@ Route::get('/', function () {
 Route::get('Devolver_Cursos', 'MasterDeveloper@DevolverCursos');
 Route::get('Devolver_Estudiantes', 'MasterDeveloper@DevolverEstudiantes');
 Route::get('Nota_Curso/{id}', 'MasterDeveloper@DevolverNotasCurso');
-Route::get('Insertar_Nota', 'MasterDeveloper@InsertarNota');
-Route::get('Modificar_Nota', 'MasterDeveloper@ModificarNota');
-Route::get('Insertar_Actividad', 'MasterDeveloper@InsertarActividad');
 Route::get('Devolver_Actividad/{id}', 'MasterDeveloper@DevolverActividad');
 Route::get('DevolverListadoHijos/{id}', 'MasterDeveloper@DevolverListadoHijos');
 Route::get('DevolverNotaEstudiante/{id}', 'MasterDeveloper@DevolverNotaEstudiante');
 Route::get('DevolverMejoresNotas', 'MasterDeveloper@DevolverMejoresNotas');
 Route::get('DevolverCatedraticos', 'MasterDeveloper@DevolverCatedraticos');
 Route::get('DevolverHorarioEstudiante/{id}', 'MasterDeveloper@DevolverHorarioEstudiante');
+
+
+Route::get('Insertar_Nota', 'MasterDeveloper@InsertarNota');
+Route::get('Modificar_Nota', 'MasterDeveloper@ModificarNota');
+Route::get('Insertar_Actividad', 'MasterDeveloper@InsertarActividad');
 Route::get('InsertarAsignacionCatedratico', 'MasterDeveloper@InsertarAsignacionCatedratico');

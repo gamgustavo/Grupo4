@@ -38,6 +38,9 @@ class MasterDeveloper extends Controller
         if($request->input('Nota') > 100){
             return 2;
         }
+        if($request->input('Nota') < 0){
+            return 2;
+        }
         $Prueba = DB::select('(Select Asignacion.idAsignacion from Asignacion, Estudiante, Curso, Catedratico where Asignacion.idCurso = Curso.idCurso and Estudiante.idEstudiante = Asignacion.idEstudiante and Asignacion.idCatedratico = Catedratico.idCatedratico and Curso.idCurso = :curso and Estudiante.idEstudiante = :estudiante and Catedratico.idCatedratico = :cate)', ['curso' => $request->input('idCurso'),'estudiante' => $request->input('idEstudiante'), 'cate' => $request->input('idCatedratico') ]);
         if($Prueba != null){
 
@@ -52,6 +55,9 @@ class MasterDeveloper extends Controller
 
     public function Modificar(Request $request){
     	if($request->input('Nota') > 100){
+            return 2;
+        }
+        if($request->input('Nota') < 0){
             return 2;
         }
         $Nota = Nota::find($request->input('idNota'));
@@ -90,6 +96,11 @@ class MasterDeveloper extends Controller
     }
 
     public function InsertarAsignacionCatedratico(Request $request){
+
+        $verificacion =  DB::select('Select idCurso, idCatedratico from AsignacionCatedratico where idCurso = :idCurso and idCatedratico = :idCatedratico', ['idCurso' => $request->input('idCurso'), 'idCatedratico' => $request->input('idCatedratico') ] );
+        if($verificacion != null){
+            return 0;
+        }
         $Asignar = DB::select('insert into AsignacionCatedratico values (:idCurso,:idCatedratico)', ['idCurso' => $request->input('idCurso'), 'idCatedratico' => $request->input('idCatedratico') ] );
         return 1;
 
