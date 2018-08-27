@@ -20,6 +20,7 @@ export class ProfesorVerAgregarNotaPage {
   myForm: FormGroup;  
   lista_estudiante: any[];
   lista_cursos:any[];
+  resultado:string;
 
   constructor(public navCtrl: NavController,public alerCtrl: AlertController, public formBuilder: FormBuilder, public http: HttpProvider) {
     this.listar_estudiantes();
@@ -91,14 +92,13 @@ export class ProfesorVerAgregarNotaPage {
     try{
       this.http.agregar_nota( alumno, curso, nota).then(
         (res) => {
-          console.log(res['result']);
-          console.log(res['usuario_id']);  
-          let usuario_id = String(res['usuario_id']);        
-          if(res['result'] =='logueado'){
-            this.doAlert('Bienvenido','Datos correctos');
-            
-          }else{
-            this.doAlert('Error','Datos incorrectos');
+          this.resultado = res.toString();
+          if(this.resultado=="1"){
+            this.doAlert("Exito", "Nota agregada exitosamente");
+          }else if(this.resultado=="2"){
+            this.doAlert("Error","La nota no es valida");
+          }else if(this.resultado=="0"){
+            this.doAlert("Error", "El maestro o el estudiante no estan asignados al curso");
           }
         },
         (error) =>{

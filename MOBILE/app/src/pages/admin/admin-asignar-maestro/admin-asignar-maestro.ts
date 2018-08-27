@@ -20,7 +20,7 @@ export class AdminAsignarMaestroPage {
   myForm: FormGroup;  
   lista_catedraticos : any [];
   lista_cursos : any [];
-
+  resultado : string;
   constructor(public navCtrl: NavController,public alerCtrl: AlertController, public formBuilder: FormBuilder, public http: HttpProvider) {
     this.listar_catedraticos();
     this.listar_cursos();
@@ -72,7 +72,12 @@ export class AdminAsignarMaestroPage {
     try{
       this.http.asignar_profesor( catedratico, curso).then(
         (res) => {
-          
+          this.resultado = res.toString();
+          if(this.resultado=="0"){
+              this.doAlert("ERROR", "El maestro ya esta asignado al curso");
+          }else{
+            this.doAlert("Exito", "Maestro asignado correctamente");
+          }
         },
         (error) =>{
           console.log(error);    

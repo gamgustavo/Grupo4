@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { FormBuilder } from '@angular/forms'; 
 import { HttpProvider } from '../../../providers/http/http';
 import { ProfesorVerActividadesCursoPage } from '../profesor-ver-actividades-curso/profesor-ver-actividades-curso';
+import { ProfesorCrearActividadPage } from '../profesor-crear-actividad/profesor-crear-actividad';
  
 /** 
  * Generated class for the ProfesorActividadPage page. 
@@ -55,6 +56,10 @@ export class ProfesorActividadPage {
   }   
   ionViewDidLoad() { 
     console.log('ionViewDidLoad ProfesorActividadPage'); 
+  }
+  nueva_actividad(){
+    this.navCtrl.push(ProfesorCrearActividadPage);
   } 
+
  
 } 

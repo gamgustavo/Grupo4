@@ -19,6 +19,7 @@ export class HttpProvider {
   ruta_listar_actividades: string = 'Devolver_Actividad'; 
   ruta_listar_notas_curso : string ='Devolver_Cursos'; 
   ruta_Insertar_Nota = 'Insertar_Nota';
+  ruta_Insertar_Actividad = 'Insertar_Actividad';
   ruta_listar_horario= 'DevolverHorarioEstudiante';
   ruta_listar_hijos = "DevolverListadoHijos";
   ruta_listar_notas_estudiante = "DevolverNotaEstudiante";
@@ -117,6 +118,13 @@ export class HttpProvider {
 
   agregar_nota(alumno, curso, nota){
     let path_aux  = this.ruta_base  + this.ruta_Insertar_Nota + '?idEstudiante='+alumno+'&idCurso='+curso+'&Nota='+nota+'&idCatedratico='+10;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();    
+  }
+  agregar_actividad(nombre, descripcion, fecha, curso){
+    let path_aux  = this.ruta_base  + this.ruta_Insertar_Actividad + '?nombre='+nombre+'&descripcion='+descripcion+'&fecha='+fecha+'&curso='+curso;
     console.log(path_aux);
     return this.http
     .get(path_aux)
