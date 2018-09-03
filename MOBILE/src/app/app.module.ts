@@ -25,6 +25,8 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import { profesorHomePage } from "../pages/_profesor/profesorHome/profesorHome";
+import { profesorListarCursosPage } from "../pages/_profesor/profesorListarCursos/profesorListarCursos";
+import { HttpProvider } from "../services/http";
 
 // import services
 // end import services
@@ -46,7 +48,8 @@ import { profesorHomePage } from "../pages/_profesor/profesorHome/profesorHome";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    profesorHomePage
+    profesorHomePage,
+    profesorListarCursosPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ import { profesorHomePage } from "../pages/_profesor/profesorHome/profesorHome";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    profesorHomePage
+    profesorHomePage,
+    profesorListarCursosPage
   ],
   providers: [
     StatusBar,
@@ -82,7 +86,8 @@ import { profesorHomePage } from "../pages/_profesor/profesorHome/profesorHome";
     Keyboard,
     ActivityService,
     TripService,
-    WeatherProvider
+    WeatherProvider,
+    HttpProvider
   ]
 })
 

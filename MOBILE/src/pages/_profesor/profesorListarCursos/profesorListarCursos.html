@@ -1,0 +1,32 @@
+<!-- -->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Listado de Cursos </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding class="trips detail-bg">
+
+
+   <ion-list ion-item *ngFor="let item of cursos">
+         <ion-item>
+            <ion-icon name="md-key" item-start large ></ion-icon>
+            <h2>Id alumno</h2>
+            <p>{{item.Nombre}}</p>
+         </ion-item>
+   </ion-list>
+
+
+
+
+</ion-content>
+
+
+
+
+
+

@@ -1,9 +1,7 @@
 import {Component} from "@angular/core";
 import {NavController, AlertController, ToastController, MenuController} from "ionic-angular";
-import {HomePage} from "../home/home";
 import {RegisterPage} from "../register/register";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TripsPage } from "../trips/trips";
 import { profesorHomePage } from "../_profesor/profesorHome/profesorHome";
 
 @Component({
@@ -37,6 +35,8 @@ export class LoginPage {
     console.log(this.myForm.value.email);
     console.log(this.myForm.value.password);
     let tipoUsuario = this.myForm.value.email;
+
+
     if(tipoUsuario === 'profesor'){
 
     }else if( tipoUsuario === 'admin'){
