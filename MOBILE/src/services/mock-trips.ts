@@ -1,7 +1,7 @@
 export let TRIPS = [
   {
     id: 1,
-    name: "Listado Cursos",
+    name: "Notas - Profesor",
     price_adult: 60,
     price_child: 30,
     time: "12h",
@@ -27,7 +27,7 @@ export let TRIPS = [
   },
   {
     id: 2,
-    name: "Actividades",
+    name: "Actividades- Profesor",
     price_adult: 90,
     price_child: 45,
     time: "4h",
@@ -41,8 +41,23 @@ export let TRIPS = [
     highlights: []
   },
   {
-    id: 3,
-    name: "Mensajes",
+    id: 4,
+    name: "Ver Horario - Estudiante",
+    price_adult: 30,
+    price_child: 15,
+    time: "6h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/trip/profesor/mensajes.png",
+    description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
+    location: "São Paulo, Brazil",
+    images: [],
+    highlights: []
+  }, 
+  {
+    id: 5,
+    name: "Ver Notas - Estudiante",
     price_adult: 30,
     price_child: 15,
     time: "6h",
@@ -56,8 +71,8 @@ export let TRIPS = [
     highlights: []
   },
   {
-    id: 4,
-    name: "Mensajes",
+    id: 6,
+    name: "Ver horario de hijos - Padre",
     price_adult: 30,
     price_child: 15,
     time: "6h",
@@ -71,8 +86,23 @@ export let TRIPS = [
     highlights: []
   },
   {
-    id: 4,
-    name: "Mensajes",
+    id: 7,
+    name: "Asignar Maestro - Admin",
+    price_adult: 30,
+    price_child: 15,
+    time: "6h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/trip/profesor/mensajes.png",
+    description: "From sexy Ipanema and Copacabana, to more secluded and slightly lesser-known stretches of sand, like Prainha Beach, Brazil's Rio de Janeiro is best known for its beaches. Grab your sunscreen and Brazilian bikinis and head to the sunny shores of Rio's best beaches.",
+    location: "São Paulo, Brazil",
+    images: [],
+    highlights: []
+  },
+  {
+    id: 8,
+    name: "Ver Maestros - Admin",
     price_adult: 30,
     price_child: 15,
     time: "6h",
