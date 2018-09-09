@@ -6,7 +6,6 @@ import {IonicStorageModule} from '@ionic/storage';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {Keyboard} from '@ionic-native/keyboard';
 
 import {ActivityService} from "../services/activity-service";
 import {TripService} from "../services/trip-service";
@@ -46,6 +45,7 @@ import { PadresVerNotasHijosPage } from "../pages/_padre/padres-ver-notas-hijos/
 import { PadreVerHorarioHijoPage } from "../pages/_padre/padre-ver-horario-hijo/padre-ver-horario-hijo";
 import { AdminVerMaestrosPage } from "../pages/_admin/admin-ver-maestros/admin-ver-maestros";
 import { AdminAsignarMaestroPage } from "../pages/_admin/admin-asignar-maestro/admin-asignar-maestro";
+import { mathService } from "../services/mathService";
 
 // import services
 // end import services
@@ -142,11 +142,11 @@ import { AdminAsignarMaestroPage } from "../pages/_admin/admin-asignar-maestro/a
   providers: [
     StatusBar,
     SplashScreen,
-    Keyboard,
     ActivityService,
     TripService,
     WeatherProvider,
-    HttpProvider
+    HttpProvider,
+    mathService
   ]
 })
 
