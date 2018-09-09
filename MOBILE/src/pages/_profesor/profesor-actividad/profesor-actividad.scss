@@ -1,10 +1,28 @@
-page-profesor-actividad {
-    .login-content { 
-        background: #FF5733; 
-        .login-box { 
-        background: #509287; 
-        padding: 20px 20px 0px 20px; 
-        margin-top: 30px; 
-        }     
-    } 
+page-checkout-trip,
+.checkout-trip {
+
+  .trip-info {
+    .trip-image {
+      width: 100%;
+      height: 120px;
+      background-size: 100% auto;
+      background-position: center;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .trip-features {
+      ion-icon {
+        min-width: 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .item.no-border .item-inner {
+    padding-right: 0;
+    [item-end] {
+      margin: 0;
+    }
+  }
+
 }

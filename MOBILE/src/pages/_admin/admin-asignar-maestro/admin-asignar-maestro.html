@@ -1,5 +1,5 @@
 <ion-header >
-  <ion-navbar color="dark">
+  <ion-navbar color="primary">
      <ion-navbar>
         <button ion-button icon-only menuToggle>
            <ion-icon name="menu"></ion-icon>
@@ -14,7 +14,7 @@
 
 
 
-<ion-content class="login-content" padding>
+<ion-content padding class="trips detail-bg">
 
 
  <ion-card>
@@ -32,7 +32,7 @@
        </ion-item>
 
        <ion-item>
-         <ion-icon name="person" item-start></ion-icon>          
+         <ion-icon ios="ios-school" md="md-school" item-start></ion-icon>          
          <ion-label>Curso</ion-label>
          <ion-select  formControlName="curso">
            <ion-option ion-item *ngFor="let item of lista_cursos"  value="{{item.idCurso}}">{{item.Nombre}}</ion-option>                       

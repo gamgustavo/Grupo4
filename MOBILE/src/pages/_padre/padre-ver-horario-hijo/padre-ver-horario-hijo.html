@@ -1,5 +1,5 @@
 <ion-header >
-  <ion-navbar color="dark">
+  <ion-navbar color="primary">
     <ion-navbar>
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -18,7 +18,7 @@
 
 
 
-<ion-content class="login-content" padding>
+<ion-content padding class="trips detail-bg">
   
   <ion-fab bottom right >
     <button ion-fab (click)="nueva_nota()">
@@ -29,14 +29,16 @@
 
 
   <ion-list >        
-
-      <button ion-item *ngFor="let item of lista_hijos"  class="button button4" (click)="DetalleHijo(item)"  icon-start>
-        
-        <ion-card-content>
-            <h4  style="font-size: 20px; font-weight:bold ">  {{ item.nombre }} </h4>
-        </ion-card-content>
-
-      </button>
+      <div class="trip card" *ngFor="let item of lista_hijos" tappable (click)="DetalleHijo(item)" margin-bottom>
+          <div class="background border-bottom" [ngStyle]="{'background-image': 'url(assets/img/trip/profesor/horario.jpg)'}">
+            <div class="background-filter rlt">
+              <div class="align-bottom" padding-left padding-right>
+                <h2>{{ item.nombre }}</h2>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div> 
 
   </ion-list>
 

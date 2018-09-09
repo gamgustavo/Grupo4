@@ -24,7 +24,7 @@
  
  
  
-<ion-content class="login-content" padding> 
+<ion-content padding class="trips detail-bg"> 
    
   <ion-fab bottom right > 
     <button ion-fab (click)="nueva_actividad()"> 
@@ -36,15 +36,24 @@
  
   <ion-list >         
  
-    <button ion-item *ngFor="let item of lista_cursos"  class="button button4" (click)="DetalleCurso(item)"  icon-start>
+    <!--button ion-item *ngFor="let item of lista_cursos"  class="button button4" (click)="DetalleCurso(item)"  icon-start>
         
       <ion-card-content>
           <h4  style="font-size: 20px; font-weight:bold ">  {{ item.Nombre }} </h4>
       </ion-card-content>
 
-    </button>
+    </button-->
 
- 
+    <div class="trip card" *ngFor="let item of lista_cursos" tappable (click)="DetalleCurso(item)" margin-bottom>
+        <div class="background border-bottom" [ngStyle]="{'background-image': 'url(assets/img/trip/profesor/actividad.jpg)'}">
+          <div class="background-filter rlt">
+            <div class="align-bottom" padding-left padding-right>
+              <h2>{{ item.Nombre }}</h2>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </ion-list> 
  
  
