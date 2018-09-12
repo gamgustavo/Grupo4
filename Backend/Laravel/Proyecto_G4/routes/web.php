@@ -29,3 +29,10 @@ Route::get('DevolverMejoresNotas', 'MasterDeveloper@DevolverMejoresNotas');
 Route::get('DevolverCatedraticos', 'MasterDeveloper@DevolverCatedraticos');
 Route::get('DevolverHorarioEstudiante/{id}', 'MasterDeveloper@DevolverHorarioEstudiante');
 Route::get('InsertarAsignacionCatedratico', 'MasterDeveloper@InsertarAsignacionCatedratico');
+// ================================================================================
+// ===================================== Fase 3 ===================================
+// ================================================================================
+Route::get('DevolverEstudiantesCursoMaestro', 'MasterDeveloper@DevolverEstudiantesCursoMaestro');
+Route::get('InsertarBoletin', 'MasterDeveloper@InsertarBoletin');
+Route::get('VisualizarBoletines/{id}', 'MasterDeveloper@VisualizarBoletines');
+
