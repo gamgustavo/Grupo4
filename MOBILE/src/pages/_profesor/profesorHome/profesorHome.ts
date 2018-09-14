@@ -11,6 +11,7 @@ import { EstudianteVerNotasPage } from "../../_estudiante/estudiante-ver-notas/e
 import { PadreVerHorarioHijoPage } from "../../_padre/padre-ver-horario-hijo/padre-ver-horario-hijo";
 import { AdminAsignarMaestroPage } from "../../_admin/admin-asignar-maestro/admin-asignar-maestro";
 import { AdminVerMaestrosPage } from "../../_admin/admin-ver-maestros/admin-ver-maestros";
+import { EstudianteVerJuegoPage } from "../../_estudiante/estudiante-ver-juego/estudiante-ver-juego";
 
 
 @Component({
@@ -45,8 +46,10 @@ export class profesorHomePage {
 
     }else if(id ===8){
       this.nav.push(AdminVerMaestrosPage);
-
+    }else if(id === 9){
+      this.nav.push(EstudianteVerJuegoPage);
     }
+    
     //this.nav.push(TripDetailPage, {id: id});
   }
 }

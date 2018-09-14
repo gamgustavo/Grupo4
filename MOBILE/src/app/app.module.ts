@@ -1,5 +1,5 @@
-import {NgModule} from "@angular/core";
-import {IonicApp, IonicModule} from "ionic-angular";
+import { NgModule } from "@angular/core";
+import { IonicApp, IonicModule } from "ionic-angular";
 import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
@@ -46,6 +46,10 @@ import { PadreVerHorarioHijoPage } from "../pages/_padre/padre-ver-horario-hijo/
 import { AdminVerMaestrosPage } from "../pages/_admin/admin-ver-maestros/admin-ver-maestros";
 import { AdminAsignarMaestroPage } from "../pages/_admin/admin-asignar-maestro/admin-asignar-maestro";
 import { mathService } from "../services/mathService";
+import { EstudianteVerJuegoPage } from "../pages/_estudiante/estudiante-ver-juego/estudiante-ver-juego";
+import { FlashCardComponent } from "../components/flash-card/flash-card";
+import { Data } from "../providers/data";
+
 
 // import services
 // end import services
@@ -82,13 +86,14 @@ import { mathService } from "../services/mathService";
     EstudianteVerHorarioPage,
     EstudianteVerNotasPage,
     EstudianteVerNotasOrdenPage,
+    EstudianteVerJuegoPage,
     PadresListadoHijosPage,
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    
     PadreVerHorarioHijoPage,
     AdminVerMaestrosPage,
-    AdminAsignarMaestroPage
-    
+    AdminAsignarMaestroPage,
+    FlashCardComponent   
  
   ],
   imports: [
@@ -132,12 +137,13 @@ import { mathService } from "../services/mathService";
     EstudianteVerHorarioPage,
     EstudianteVerNotasPage,
     EstudianteVerNotasOrdenPage,
+    EstudianteVerJuegoPage,
     PadresListadoHijosPage,
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    
     PadreVerHorarioHijoPage,
     AdminVerMaestrosPage,
-    AdminAsignarMaestroPage
+    AdminAsignarMaestroPage,
   ],
   providers: [
     StatusBar,
@@ -146,7 +152,8 @@ import { mathService } from "../services/mathService";
     TripService,
     WeatherProvider,
     HttpProvider,
-    mathService
+    mathService,
+    Data    
   ]
 })
 
