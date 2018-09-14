@@ -18,7 +18,7 @@ export class mathProvider {
 
 
   getAll() {
-    return this.http.get(this.maths);
+    return this.maths;
   }
 
   getItem(id) {
@@ -32,6 +32,11 @@ export class mathProvider {
 
   remove(item) {
     this.maths.splice(this.maths.indexOf(item), 1);
+  }  
+
+
+  solvePostfix(postfixs: string) {
+    return eval(postfixs);
   }  
 
 }

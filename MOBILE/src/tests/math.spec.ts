@@ -21,80 +21,57 @@ fdescribe('Service: mathProvider', () => {
     httpMock = TestBed.get(HttpTestingController);
   });
 
-  it('should be created', () => {
+  it('Prueba de creacion del Servicio', () => {
     expect(service).toBeTruthy();
   });
 
   describe('Prueba el Proveedor de Operaciones', () => {
-    it('should return maths', () => {
-      // Arrange
-      const mockResponse = {
-        results: [
-          {
-            "gender": "male",
-            "name": {
-              "title": "mr",
-              "first": "samuel",
-              "last": "ross"
-            },
-            "email": "samuel.ross@example.com",
-          }
-        ]
-      };
-      let dataError, dataResponse;
-      // Act
-      service.getAllmaths()
-      .subscribe((response) => {
-        dataResponse = response['results'];
-      }, (error) => {
-        dataError = error;
-      });
-      const req = httpMock.expectOne(`https://randomuser.me/api/?results=25`);
-      req.flush(mockResponse);
-      // Assert
-        expect(dataResponse.length).toEqual(1);
-      //expect(req.request.url).toEqual(`https://randomuser.me/api/?results=25`);
-      //expect(req.request.method).toEqual('GET');
-      //expect(dataError).toBeUndefined();
+    it('Prueba de cantidad de operaciones Cantidad de Operaciones', () => {
+      let variable: any;
+      variable = service.getAll();
+      console.log(variable);
+      expect(variable.length).toEqual(3);
     });
+  });
 
+  describe('Prueba el string de una operacion', () => {
+    it('Prueba que varificara la operacion a realizar', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['operation']);
+      expect(variable['operation']).toEqual('30+30');
+    });
+  });  
+
+
+  describe('Prueba el resultado esperado de una operacion', () => {
+    it('Prueba que varificara la operacion esperada como resultado', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(60);
+    });
+  });
+
+  describe('Prueba Id de las operaciones', () => {
+    it('Prueba que varificara el Id esperado de la operacion', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(60);
+    });
   });
 
 
-  describe("Prueba la cantidad de Operaciones que tiene que cargar",()=> {
-      let dataError, dataResponse;
-      // Act
-      service.getAllmaths()
-      .subscribe((response) => {
-        dataResponse = response['results'];
-      }, (error) => {
-        dataError = error;
-      });    
-    expect(dataResponse.length).toEqual(1);
-  });
-  describe("Prueba El resultado de La operacion 1",()=> {
-      let dataError, dataResponse;
-      // Act
-      service.getAllmaths()
-      .subscribe((response) => {
-        dataResponse = response['results'];
-      }, (error) => {
-        dataError = error;
-      });    
-    expect(dataResponse.length).toEqual(1);
+  describe('Prueba nivel de las operaciones', () => {
+    it('Prueba que varificara el el nivel de dificultad de las operaciones', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['level']);
+      expect(variable['level']).toEqual(0);
+    });
   });
 
-  describe("Prueba El String de la operacion esperada",()=> {
-      let dataError, dataResponse;
-      // Act
-      service.getAllmaths()
-      .subscribe((response) => {
-        dataResponse = response['results'];
-      }, (error) => {
-        dataError = error;
-      });    
-    expect(dataResponse.length).toEqual(1);
-  });
 
 
 });
