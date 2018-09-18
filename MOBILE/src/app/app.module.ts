@@ -49,6 +49,9 @@ import { mathService } from "../services/mathService";
 import { EstudianteVerJuegoPage } from "../pages/_estudiante/estudiante-ver-juego/estudiante-ver-juego";
 import { FlashCardComponent } from "../components/flash-card/flash-card";
 import { Data } from "../providers/data";
+import { EstudianteHomePage } from "../pages/_estudiante/estudiante-home/estudiante-home";
+import { AdminHomePage } from "../pages/_admin/admin-home/admin-home";
+import { PadreHomePage } from "../pages/_padre/padre-home/padre-home";
 
 
 // import services
@@ -93,7 +96,10 @@ import { Data } from "../providers/data";
     PadreVerHorarioHijoPage,
     AdminVerMaestrosPage,
     AdminAsignarMaestroPage,
-    FlashCardComponent   
+    FlashCardComponent,
+    AdminHomePage,
+    PadreHomePage,
+    EstudianteHomePage   
  
   ],
   imports: [
@@ -144,6 +150,9 @@ import { Data } from "../providers/data";
     PadreVerHorarioHijoPage,
     AdminVerMaestrosPage,
     AdminAsignarMaestroPage,
+    AdminHomePage,
+    PadreHomePage,
+    EstudianteHomePage
   ],
   providers: [
     StatusBar,

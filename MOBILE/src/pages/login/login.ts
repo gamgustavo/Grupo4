@@ -3,6 +3,9 @@ import {NavController, AlertController, ToastController, MenuController} from "i
 import {RegisterPage} from "../register/register";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { profesorHomePage } from "../_profesor/profesorHome/profesorHome";
+import { AdminHomePage } from "../_admin/admin-home/admin-home";
+import { PadreHomePage } from "../_padre/padre-home/padre-home";
+import { EstudianteHomePage } from "../_estudiante/estudiante-home/estudiante-home";
 
 @Component({
   selector: 'page-login',
@@ -38,15 +41,18 @@ export class LoginPage {
 
 
     if(tipoUsuario === 'profesor'){
+      this.nav.setRoot(profesorHomePage);
 
     }else if( tipoUsuario === 'admin'){
+      this.nav.setRoot(AdminHomePage);
 
     }else if( tipoUsuario === 'padre' ){
+      this.nav.setRoot(PadreHomePage);
 
     }else if(tipoUsuario === 'estudiante' ){
+      this.nav.setRoot(EstudianteHomePage);
 
     }
-    this.nav.setRoot(profesorHomePage);
   }
 
   forgotPass() {

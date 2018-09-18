@@ -8,6 +8,7 @@ import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
 import { EstudianteVerJuegoPage } from "../pages/_estudiante/estudiante-ver-juego/estudiante-ver-juego";
+import { RegisterPage } from "../pages/register/register";
 
 export interface MenuItem {
     title: string;
@@ -23,7 +24,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //rootPage: any = LoginPage;
-  rootPage: any = EstudianteVerJuegoPage;
+  rootPage: any = LoginPage;
 
   
   appMenuItems: Array<MenuItem>;
