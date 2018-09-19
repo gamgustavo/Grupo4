@@ -94,4 +94,31 @@ class MasterDeveloper extends Controller
         return 1;
 
     }
+
+    // ====================================================================================================
+    // ================================================ fase 3 ============================================
+    // ====================================================================================================
+
+    public function DevolverEstudiantesCursoMaestro(Request $request){
+        return DB::select('select E.nombre, E.idEstudiante from Estudiante E, Curso C, catedratico CA, asignacion A
+                            where C.idCurso = :idCuso  and C.idCurso = A.idCurso and CA.idCatedratico = :idCatedratico and A.idCatedratico = CA.idCatedratico
+                            and E.idEstudiante = A.idEstudiante', ['idCurso' => $request->input('idCurso'), 'idCatedratico' => $request->input('idCatedratico') ]);
+    }
+
+
+    public function InsertarBoletin(Request $request){
+        $Prueba = DB::select('select A.idCurso, A.idCatedratico from asignacioncatedratico A where A.idCurso = :curso and A.idCatedratico = :cate ', ['curso' => $request->input('idCurso'), 'cate' => $request->input('idCatedratico') ]);
+        if($Prueba != null){
+
+        $Asignacion = DB::select('insert into Boletin(Titulo, Informacion, idCurso, idCatedratico) values (\':titulo\', \':informacion\', :curso, :cate);', ['curso' => $request->input('idCurso'), 'cate' => $request->input('idCatedratico'), 'titulo' => $request->input('titulo'), 'informacion' => $request->input('informacion')]);
+            return 1;
+        }else{
+
+            return 0;
+        }
+    }
+
+    public function VisualizarBoletines($id){
+        return DB::select('select B.titulo, B.informacion, E.Nombre, C.Nombre from Boletin B, estudiante E, asignacion A, Curso C where E.idPadre = :padre and A.idEstudiante = E.idEstudiante and A.idCurso = B.idCurso and B.idCatedratico = A.idCatedratico and C.idCurso = A.idCurso', ['padre' => $id]);
+    }
 }
