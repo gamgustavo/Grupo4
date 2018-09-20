@@ -27,10 +27,33 @@ class PruebaCest
 /**
     @Then Veo un Json que no contiene notas mayores a cien
 **/
-    
+
     $I->seeResponseIsJson();
 
     $I->dontSeeResponseContainsJson(['Nota' => '101']);
- 
+
     }
 }
+
+public function test5(ApiTester $I)
+    {
+                /**
+            @Given YO COMO ADMINISTRADOR QUIERO CREAR UNA ACTIVIDAD
+        **/
+
+            $I->wantTo('YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE AL CREAR UNA ACTIVIDAD LA FECHA SEA CORRECTA');
+
+        /**
+            @When INGRESO LA FECHA DE REALIZACIÓN DE LA ACTIVIDAD
+        **/
+            $I->amOnPage('/Devolver_Actividad/1');
+
+        /**
+            @Then LA FECHA TIENE QUE SER VÁLIDA
+        **/
+
+            $I->seeResponseIsJson();
+            $I->seeResponseMatchesJsonType([
+                'Fecha' => 'string:regex(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/)',
+           ]);
+    }
