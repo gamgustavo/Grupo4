@@ -54,8 +54,9 @@ public function test5(ApiTester $I)
 
             $I->seeResponseIsJson();
             $I->seeResponseMatchesJsonType([
-                'Fecha' => 'string:regex(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/)',
+                'Fecha' => 'string:regex(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/)' //Expresion regular para fecha
            ]);
+
     }
 
     public function test6(ApiTester $I)
