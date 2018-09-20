@@ -57,3 +57,28 @@ public function test5(ApiTester $I)
                 'Fecha' => 'string:regex(/^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/)',
            ]);
     }
+
+    public function test6(ApiTester $I)
+    {
+                /**
+            @Given YO COMO ADMINISTRADOR QUIERO CREAR UNA ACTIVIDAD
+        **/
+
+            $I->wantTo('YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE AL CREAR UNA ACTIVIDAD LOS CAMPOS DE NOMBRE Y DESCRIPCIÓN NO ESTEN VACIOS');
+
+        /**
+            @When EL NOMBRE Y LA DESCRIPCIÓN DE LA ACTIVIDAD NO ESTAN VACIOS
+        **/
+            $I->amOnPage('/Devolver_Actividad/1');
+
+        /**
+            @Then LA ACTIVIDAD ES VÁLIDA Y SE PROCEDE A CREAR
+        **/
+
+            $I->seeResponseIsJson();
+            $I->dontSeeResponseContainsJson([
+                'Nombre' => ' ',
+                'Descripcion' => ' '
+            ]);
+
+    }
