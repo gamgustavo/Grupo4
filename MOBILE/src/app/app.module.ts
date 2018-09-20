@@ -52,6 +52,8 @@ import { Data } from "../providers/data";
 import { EstudianteHomePage } from "../pages/_estudiante/estudiante-home/estudiante-home";
 import { AdminHomePage } from "../pages/_admin/admin-home/admin-home";
 import { PadreHomePage } from "../pages/_padre/padre-home/padre-home";
+import { AdminAgregarBoletinPage } from "../pages/_admin/admin-agregar-boletin/admin-agregar-boletin";
+import { PadreVerBoletinesPage } from "../pages/_padre/padre-ver-boletines/padre-ver-boletines";
 
 
 // import services
@@ -94,10 +96,12 @@ import { PadreHomePage } from "../pages/_padre/padre-home/padre-home";
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    
     PadreVerHorarioHijoPage,
+    PadreVerBoletinesPage,
     AdminVerMaestrosPage,
     AdminAsignarMaestroPage,
     FlashCardComponent,
     AdminHomePage,
+    AdminAgregarBoletinPage,
     PadreHomePage,
     EstudianteHomePage   
  
@@ -148,9 +152,11 @@ import { PadreHomePage } from "../pages/_padre/padre-home/padre-home";
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    
     PadreVerHorarioHijoPage,
+    PadreVerBoletinesPage,
     AdminVerMaestrosPage,
     AdminAsignarMaestroPage,
     AdminHomePage,
+    AdminAgregarBoletinPage,
     PadreHomePage,
     EstudianteHomePage
   ],

@@ -20,15 +20,25 @@ export class HttpProvider {
   ruta_listar_notas_curso : string ='Devolver_Cursos'; 
   ruta_Insertar_Nota = 'Insertar_Nota';
   ruta_Insertar_Actividad = 'Insertar_Actividad';
+  ruta_Insertar_Boletin = 'Insertar_Boletin';
   ruta_listar_horario= 'DevolverHorarioEstudiante';
   ruta_listar_hijos = "DevolverListadoHijos";
   ruta_listar_notas_estudiante = "DevolverNotaEstudiante";
   ruta_listar_maestros = "DevolverCatedraticos";
   ruta_listar_notas_desc= "DevolverNotaEstudiante";
   ruta_asignar_profesor = "InsertarAsignacionCatedratico";
+  ruta_listar_boletines ="DevolverCatedraticos";
 
   constructor(public http: HttpClient) {
     console.log('Hello HttpProvider Provider');
+  }
+
+  listar_boletines(){
+    let path_aux  = this.ruta_base  + this.ruta_listar_boletines;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise(); 
   }
 
   asignar_profesor(profesor,curso){
@@ -130,7 +140,13 @@ export class HttpProvider {
     .get(path_aux)
     .toPromise();    
   }
-
+  agregar_boletin(nombre, descripcion){
+    let path_aux  = this.ruta_base  + this.ruta_Insertar_Boletin + '?nombre='+nombre+'&descripcion='+descripcion;
+    console.log(path_aux);
+    return this.http
+    .get(path_aux)
+    .toPromise();    
+  }
 
 
 
