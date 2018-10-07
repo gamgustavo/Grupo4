@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ProfesorCrearActividadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+  <ion-navbar color="dark">
+     <ion-navbar>
+        <button ion-button icon-only menuToggle>
+           <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+           Agregar Actividad
+        </ion-title>
+     </ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+
+
+  <ion-card>
+    
+    <form [formGroup]="myForm" (ngSubmit)="agregar_actividad()">
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Nombre de la Actividad</ion-label>
+          <ion-input formControlName="nombre" placeholder="Nombre"></ion-input>
+        </ion-item>   
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Descripcion de la actividad</ion-label>
+          <ion-input formControlName="descripcion" placeholder="Descripcion"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="person" item-start></ion-icon>          
+          <ion-label>Curso</ion-label>
+          <ion-select  formControlName="curso">
+            <ion-option ion-item *ngFor="let item of lista_cursos"  value="{{item.idCurso}}">{{item.Nombre}}</ion-option>                       
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="md-podium" item-start></ion-icon>
+          <ion-label stacked>Fecha de Entrega</ion-label>
+          <ion-input formControlName="fecha"></ion-input>
+        </ion-item>  
+
+
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit" [disabled]="!myForm.valid" >Crear Actividad</button>
+      </div>
+    </form>
+  </ion-card>  
+
+
+</ion-content>

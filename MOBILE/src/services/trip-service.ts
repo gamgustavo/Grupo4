@@ -13,6 +13,10 @@ export class TripService {
     return this.trips;
   }
 
+  getVistasProfesor() {
+    return this.trips;
+  }  
+
   getItem(id) {
     for (var i = 0; i < this.trips.length; i++) {
       if (this.trips[i].id === parseInt(id)) {
