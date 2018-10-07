@@ -12,6 +12,7 @@ import { PadreVerHorarioHijoPage } from "../../_padre/padre-ver-horario-hijo/pad
 import { AdminAsignarMaestroPage } from "../../_admin/admin-asignar-maestro/admin-asignar-maestro";
 import { AdminVerMaestrosPage } from "../../_admin/admin-ver-maestros/admin-ver-maestros";
 import { EstudianteVerJuegoPage } from "../../_estudiante/estudiante-ver-juego/estudiante-ver-juego";
+import { AdminAgregarBoletinPage } from "../../_admin/admin-agregar-boletin/admin-agregar-boletin";
 
 
 @Component({
@@ -27,6 +28,14 @@ export class profesorHomePage {
     this.trips = tripService.getAll();
   }
 
+  esProfesor(actual){
+    if(actual.id ===  1 || actual.id === 2 || actual.id === 10 ){
+      return true;
+    }
+    return false;
+  }
+
+
   // view trip detail
   viewDetail(id) {
     if( id === 1 ){ //notas
@@ -35,21 +44,20 @@ export class profesorHomePage {
       this.nav.push(ProfesorActividadPage);
     }else if(id === 4){
       this.nav.push(EstudianteVerHorarioPage);
-
     }else if(id === 5){
       this.nav.push(EstudianteVerNotasPage);
-
     }else if(id === 6){
       this.nav.push(PadreVerHorarioHijoPage);
     }else if(id === 7){
       this.nav.push(AdminAsignarMaestroPage);
-
     }else if(id ===8){
       this.nav.push(AdminVerMaestrosPage);
     }else if(id === 9){
       this.nav.push(EstudianteVerJuegoPage);
-    }
-    
+    }else if(id === 10){
+      this.nav.push(AdminAgregarBoletinPage);
+    }    
+
     //this.nav.push(TripDetailPage, {id: id});
   }
 }

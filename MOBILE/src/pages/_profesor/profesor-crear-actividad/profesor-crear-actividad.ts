@@ -65,7 +65,8 @@ export class ProfesorCrearActividadPage {
       )  
     }catch(e){
       this.doAlert('Error','Intente mas Tarde');
-    }    
+    }
+    this.navCtrl.pop();
   }
   doAlert(titulo: String, mensaje:String) {
     let alert = this.alerCtrl.create({

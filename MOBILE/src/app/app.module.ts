@@ -103,7 +103,7 @@ import { PadreVerBoletinesPage } from "../pages/_padre/padre-ver-boletines/padre
     AdminHomePage,
     AdminAgregarBoletinPage,
     PadreHomePage,
-    EstudianteHomePage   
+    EstudianteHomePage
  
   ],
   imports: [

@@ -14,16 +14,11 @@
 
 
 <ion-content padding>
-  <ion-list ion-item *ngFor="let item of lista_notas">
+  <ion-list ion-item *ngFor="let item of lista_actividades">
     <ion-item>
        <ion-icon  ios="ios-attach" md="md-attach" item-start large ></ion-icon>
        <h2>Titulo</h2>
        <p>{{item.Nombre}}</p>
-    </ion-item>
-    <ion-item>
-       <ion-icon ios="ios-create" md="md-create"  item-start large></ion-icon>
-       <h2>Descripcion</h2>
-       <p>{{item.Descripcion}}</p>
     </ion-item>
     <ion-item>
        <ion-icon ios="ios-calendar" md="md-calendar" item-start large></ion-icon>

@@ -31,7 +31,7 @@ fdescribe('Service: mathProvider', () => {
       let variable: any;
       variable = service.getAll();
       console.log(variable);
-      expect(variable.length).toEqual(3);
+      expect(variable.length).toEqual(4);
     });
   });
 
@@ -40,7 +40,7 @@ fdescribe('Service: mathProvider', () => {
       let variable: any;
       variable = service.getItem(1);
       console.log(variable['operation']);
-      expect(variable['operation']).toEqual('30+30');
+      expect(variable['operation']).toEqual('2*5');
     });
   });  
 

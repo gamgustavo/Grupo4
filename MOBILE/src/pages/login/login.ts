@@ -51,8 +51,8 @@ export class LoginPage {
 
     }else if(tipoUsuario === 'estudiante' ){
       this.nav.setRoot(EstudianteHomePage);
-
     }
+
   }
 
   forgotPass() {

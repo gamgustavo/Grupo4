@@ -30,7 +30,7 @@ export class EstudianteHomePage {
 
   }
   esEstudiante(actual){
-    if(actual.name.includes("Estudiante")){
+    if(actual.id === 4 || actual.id === 5 || actual.id === 9 ){
       return true;
     }
     return false;

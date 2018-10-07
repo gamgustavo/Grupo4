@@ -32,9 +32,13 @@
         </ion-item>   
 
         <ion-item>
-          <ion-icon ios="ios-create" md="md-create" item-start></ion-icon>          
-          <ion-label>Descripcion de la actividad</ion-label>
-          <ion-input formControlName="descripcion" placeholder="Descripcion"></ion-input>
+          <ion-icon ios="ios-boat" md="md-boat" item-start></ion-icon>          
+          <ion-label>Juego</ion-label>
+          <ion-select formControlName="descripcion" >
+            <ion-option value="1">Matematica I</ion-option>
+            <ion-option value="2">Matematica II</ion-option>
+          </ion-select>
+
         </ion-item>
 
         <ion-item>
@@ -48,7 +52,8 @@
         <ion-item>
           <ion-icon ios="ios-calendar" md="md-calendar" item-start></ion-icon>
           <ion-label stacked>Fecha de Entrega</ion-label>
-          <ion-input formControlName="fecha"></ion-input>
+          <ion-datetime formControlName="fecha" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+
         </ion-item>  
 
 
