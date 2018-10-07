@@ -74,5 +74,16 @@ fdescribe('Service: mathProvider', () => {
   });
 
 
+  describe('Prueba las Operaciones relacionadas ', () => {
+    it('Prueba que las operaciones en conjunto funcionen', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(60);
+    });
+  });
+
+
+
 
 });
