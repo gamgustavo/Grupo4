@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-navbar color="primary">
+     <ion-navbar>
+        <button ion-button icon-only menuToggle>
+           <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+           Mi horario
+        </ion-title>
+        <ion-buttons end>
+           
+        </ion-buttons>
+     </ion-navbar>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="trips detail-bg">
+ <ion-list ion-item *ngFor="let item of lista_horario">
+  <ion-item>
+     <ion-icon ios="ios-school" md="md-school" item-start large ></ion-icon>
+     <h2>Nombre Curso</h2>
+     <p>{{item.Nombre}}</p>
+  </ion-item>
+  <ion-item>
+     <ion-icon ios="ios-timer" md="md-timer" item-start large></ion-icon>
+     <h2>Horario</h2>
+     <p>{{item.Hora}}</p>
+  </ion-item>
+  <ion-item>
+     <ion-icon ios="ios-calendar" md="md-calendar" item-start large></ion-icon>
+     <h2>Dias</h2>
+     <p>{{item.Dias}}</p>
+  </ion-item>
+  <ion-item>
+     <ion-icon ios="ios-bookmark" md="md-bookmark" item-start large></ion-icon>
+     <h2>Salon</h2>
+     <p>{{item.Salon}}</p>
+  </ion-item>
+</ion-list>
+</ion-content>

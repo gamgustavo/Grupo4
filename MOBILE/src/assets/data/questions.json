@@ -1,0 +1,45 @@
+{
+	"questions": [
+
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'> 5 + 5 * 4 </FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>25</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "When is this?",
+			"answers": [
+				{"answer": "14", "correct": false, "selected": false},
+				{"answer": "31", "correct": false, "selected": false},
+				{"answer": "25", "correct": true, "selected": false},				
+				{"answer": "18", "correct": false, "selected": false},
+				{"answer": "21", "correct": false, "selected": false}				
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'> 8 + 4 * 3 + 1</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>21</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "When is this?",
+			"answers": [
+				{"answer": "14", "correct": false, "selected": false},
+				{"answer": "21", "correct": true,  "selected": false},
+				{"answer": "14", "correct": false, "selected": false},
+				{"answer": "25", "correct": false, "selected": false},				
+				{"answer": "31", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'> 5 + 5 - 4 / 2</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>8</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "When is this?",
+			"answers": [
+				{"answer": "14", "correct": false, "selected": false},				
+				{"answer": "8", "correct": true, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "14", "correct": false, "selected": false},
+				{"answer": "15", "correct": false, "selected": false}
+			]
+		}		
+
+	]
+}
