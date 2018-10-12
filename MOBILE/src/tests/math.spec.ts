@@ -86,4 +86,23 @@ fdescribe('Service: mathProvider', () => {
 
 
 
+////////////////////////// Operaciones nivel 2
+
+
+
+
+  describe('Operaciones que Prueban contenido de operacion multiplicar', () => {
+    it('Prueba que varificara el nivel de operacion', () => {
+      let variable: any;
+      variable = service.getItem(1);
+      console.log(variable['operation']);
+      expect(variable['operation']).toContain('*');
+    });
+  });  
+
+  
+
+
+
+
 });
