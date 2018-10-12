@@ -292,4 +292,75 @@ public function testInsertar_mas_Boletines()
 
     }
 
+public function testInsertar_boletas()
+    {
+         
+        $response = $this->get('InsertarBoletin');
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '1',
+                'idCurso' => '1'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '2',
+                'idCurso' => '2'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '3',
+                'idCurso' => '3'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '4',
+                'idCurso' => '4'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '5',
+                'idCurso' => '5'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '6',
+                'idCurso' => '6'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '7',
+                'idCurso' => '7'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '8',
+                'idCurso' => '8'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '9',
+                'idCurso' => '9'
+                ]);
+        $this->assertDatabaseHas('Boletin', [
+                'Ttitulo' => 'Dia del padre',
+                'Informacion' => 'Se hara un festejo',
+                'idCatedratico' => '10',
+                'idCurso' => '10'
+                ]);
+
+
+    }
+
+
+
+
 }
