@@ -28,7 +28,7 @@ class PruebaCest
         /**
             @Then Veo un Json que no contiene notas mayores a cien
         **/
-    
+
             $I->seeResponseIsJson();
             $I->SeeResponseMatchesJsonType(['Nota' => 'integer:<101']);
 
@@ -52,7 +52,7 @@ class PruebaCest
         /**
             @Then Veo un Json que no contiene notas mayores a cien
         **/
-    
+
             $I->seeResponseIsJson();
             $I->SeeResponseMatchesJsonType(['Nota' => 'integer:>0']);
     }
@@ -73,7 +73,7 @@ class PruebaCest
         /**
             @Then EL BOLETÍN PROCEDE A SER CREADO
         **/
-    
+
             $I->seeResponseIsJson();
             $I->dontSeeResponseContainsJson(['informacion' => ' ']);
     }
@@ -94,9 +94,51 @@ class PruebaCest
         /**
             @Then EL BOLETÍN PROCEDE A SER CREADO
         **/
-    
+
             $I->seeResponseIsJson();
             $I->dontSeeResponseContainsJson(['titulo' => ' ']);
+    }
+
+    public function testParejas1(ApiTester $I)
+    {
+        /**
+              @Given YO COMO ESTUDIANTE QUIERO VISUALIZAR LAS NOTAS DE LOS CURSOS Y ESTAS NO DEBEN ESTAR VACIAS
+        **/
+
+        $I->wantTo('YO COMO ESTUDIANTE QUIERO VISUALIZAR LAS NOTAS DE MIS CURSOS Y ESTAS NO DEBEN ESTAR VACIAS');
+        /**
+              @When INGRESO MI USUARIO Y MI CONTRASEÑA SON CORRECTOS
+        **/
+
+        $I->amOnPage('/DevolverNotaEstudiante/1');
+
+        /**
+            @Then TODOS LOS CURSOS LES TIENEN QUE APARECER MI NOTAS
+        **/
+        $I->seeResponseIsJson();
+        $I->dontSeeResponseContainsJson(['Nota' => ' ']);
+
+    }
+
+    public function testParejas2(ApiTester $I)
+    {
+        /**
+              @Given YO COMO ESTUDIANTE QUIERO VISUALIZAR LAS NOTAS DE LOS CURSOS Y ESTAS DEBEN DE SER VÁLIDAS
+        **/
+
+        $I->wantTo('YO COMO ESTUDIANTE QUIERO VISUALIZAR LAS NOTAS DE MIS CURSOS Y ESTAS DEBEN DE SER VÁLIDAS');
+        /**
+              @When INGRESO MI USUARIO Y MI CONTRASEÑA SON CORRECTOS
+        **/
+
+        $I->amOnPage('/DevolverNotaEstudiante/1');
+
+        /**
+            @Then TODOS LOS CURSOS LES TIENEN QUE APARECER MI NOTAS
+        **/
+        $I->seeResponseIsJson();
+        $I->dontSeeResponseContainsJson(['Nota' => 'integer:>60:<101']);
+
     }
 
 
@@ -104,4 +146,7 @@ class PruebaCest
 
 
 
+
 }
+
+?>
