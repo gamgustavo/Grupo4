@@ -9,6 +9,7 @@ import { PadreVerHorarioHijoPage } from '../../_padre/padre-ver-horario-hijo/pad
 import { AdminAsignarMaestroPage } from '../../_admin/admin-asignar-maestro/admin-asignar-maestro';
 import { AdminVerMaestrosPage } from '../../_admin/admin-ver-maestros/admin-ver-maestros';
 import { EstudianteVerJuegoPage } from '../estudiante-ver-juego/estudiante-ver-juego';
+import { EstudianteVerJuegoMultiplicacionPage } from "../estudiante-ver-juego-multiplicacion/estudiante-ver-juego-multiplicacion";
 
 /**
  * Generated class for the EstudianteHomePage page.
@@ -41,7 +42,7 @@ export class EstudianteHomePage {
     }else if( id === 2){ //actividades
       this.nav.push(ProfesorActividadPage);
     }else if(id === 4){
-      this.nav.push(EstudianteVerHorarioPage);
+      this.nav.push(EstudianteVerJuegoMultiplicacionPage);
 
     }else if(id === 5){
       this.nav.push(EstudianteVerNotasPage);

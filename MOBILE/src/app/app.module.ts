@@ -54,6 +54,7 @@ import { AdminHomePage } from "../pages/_admin/admin-home/admin-home";
 import { PadreHomePage } from "../pages/_padre/padre-home/padre-home";
 import { AdminAgregarBoletinPage } from "../pages/_admin/admin-agregar-boletin/admin-agregar-boletin";
 import { PadreVerBoletinesPage } from "../pages/_padre/padre-ver-boletines/padre-ver-boletines";
+import { EstudianteVerJuegoMultiplicacionPage } from "../pages/_estudiante/estudiante-ver-juego-multiplicacion/estudiante-ver-juego-multiplicacion";
 
 
 // import services
@@ -92,6 +93,7 @@ import { PadreVerBoletinesPage } from "../pages/_padre/padre-ver-boletines/padre
     EstudianteVerNotasPage,
     EstudianteVerNotasOrdenPage,
     EstudianteVerJuegoPage,
+    EstudianteVerJuegoMultiplicacionPage,
     PadresListadoHijosPage,
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    
@@ -148,6 +150,7 @@ import { PadreVerBoletinesPage } from "../pages/_padre/padre-ver-boletines/padre
     EstudianteVerNotasPage,
     EstudianteVerNotasOrdenPage,
     EstudianteVerJuegoPage,
+    EstudianteVerJuegoMultiplicacionPage,    
     PadresListadoHijosPage,
     PadreVerMensajesPage,
     PadresVerNotasHijosPage,    

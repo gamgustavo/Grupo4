@@ -23,4 +23,17 @@ export class Data {
 
 	}
 
+	loadMultiplicacion(){
+
+			if(this.data){
+				return Promise.resolve(this.data);
+			}
+
+		return this.http
+		.get('/../src/assets/data/questions_multiplicacion.json')
+		.toPromise(); 		
+
+	}
+
+
 }

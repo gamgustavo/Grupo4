@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { HttpProvider } from '../../../services/http';
-import { ProfesorVerAgregarNotaPage } from "../profesor-ver-agregar-nota/profesor-ver-agregar-nota";
-
+import { IonicPage } from "ionic-angular";
 
 
 /**
@@ -21,49 +16,9 @@ import { ProfesorVerAgregarNotaPage } from "../profesor-ver-agregar-nota/profeso
 })
 export class ProfesorCrearJuegoPage {
 
+  constructor() {
 
-  identificador_curso:any;
-  lista_notas: any[];  
-
-  constructor(public navCtrl: NavController , public navParams: NavParams,public http: HttpProvider,public alerCtrl: AlertController) {
-     console.log('Passed params id_usuario', navParams.data['item']);
-     this.identificador_curso = navParams.data['item'];
-     this.listar_notas();
   }
 
-  doAlert(titulo: String, mensaje:String) {
-    let alert = this.alerCtrl.create({
-      title: String(titulo),
-      message: String(mensaje),
-      buttons: ['Ok']
-    });
-    alert.present()
-  }  
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfesorVerNotasCursoPage');
-  }
-
- listar_notas(){
-    try{
-      this.http.listar_notas(this.identificador_curso.idCurso).then(
-        (res) => {
-          this.lista_notas = JSON.parse(JSON.stringify(res));
-          console.log(this.lista_notas);
-        },
-        (error) =>{
-          console.log(error);
-        }
-      )  
-    }catch(e){
-      this.doAlert('Error','No se puede cargar intenta mas tarde');
-    }
- }  
-
-
- nueva_nota(){
-    this.navCtrl.push(ProfesorVerAgregarNotaPage);
- }
 
 }

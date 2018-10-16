@@ -6,6 +6,7 @@ import {MATH} from "./mathSource";
 export class mathProvider {
 
   private maths: any;
+	data: any;  
 
 
   constructor(public http: HttpClient) {
@@ -38,5 +39,11 @@ export class mathProvider {
   solvePostfix(postfixs: string) {
     return eval(postfixs);
   }  
+
+	loadMultiplicacion(){
+
+		return this.http.get('/../src/assets/data/questions_multiplicacion.json') 		
+
+	}  
 
 }

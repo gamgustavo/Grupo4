@@ -3,11 +3,14 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import {} from 'jasmine';
 
 import { mathProvider } from './math';
+import { Data } from "../providers/data";
 
 fdescribe('Service: mathProvider', () => {
 
   let service: mathProvider;
   let httpMock: HttpTestingController;
+  let operaciones: Data;
+  let servicio_operaciones: Data;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -16,9 +19,11 @@ fdescribe('Service: mathProvider', () => {
       ],
       providers: [
         { provide: mathProvider, useClass: mathProvider },
+        { provide: Data, useClass: Data },        
       ],
     });
     service = TestBed.get(mathProvider);
+    servicio_operaciones = TestBed.get(Data);
     httpMock = TestBed.get(HttpTestingController);
   });
 
@@ -30,8 +35,8 @@ fdescribe('Service: mathProvider', () => {
     it('Prueba de cantidad de operaciones Cantidad de Operaciones', () => {
       let variable: any;
       variable = service.getAll();
-      console.log(variable);
-      expect(variable.length).toEqual(4);
+      //console.log(variable);
+      expect(variable.length).toEqual(13);
     });
   });
 
@@ -40,7 +45,7 @@ fdescribe('Service: mathProvider', () => {
       let variable: any;
       variable = service.getItem(1);
       console.log(variable['operation']);
-      expect(variable['operation']).toEqual('2*5');
+      expect(variable['operation']).toEqual('2+5+3');
     });
   });  
 
@@ -92,11 +97,14 @@ fdescribe('Service: mathProvider', () => {
 
 
   describe('Operaciones que Prueban contenido de operacion multiplicar', () => {
-    it('Prueba que varificara el nivel de operacion', () => {
+    it('Prueba que varificara Las Operaciones del Juego Multiplicacion', () => {
+
       let variable: any;
       variable = service.getItem(1);
-      console.log(variable['operation']);
-      expect(variable['operation']).toContain('*');
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(60);
+      
+      
     });
   });  
 
