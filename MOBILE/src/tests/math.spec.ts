@@ -36,7 +36,7 @@ fdescribe('Service: mathProvider', () => {
       let variable: any;
       variable = service.getAll();
       //console.log(variable);
-      expect(variable.length).toEqual(13);
+      expect(variable.length).toEqual(16);
     });
   });
 
@@ -96,19 +96,44 @@ fdescribe('Service: mathProvider', () => {
 
 
 
-  describe('Operaciones que Prueban contenido de operacion multiplicar', () => {
-    it('Prueba que varificara Las Operaciones del Juego Multiplicacion', () => {
+  describe('Operacion 15 Multiplicacion', () => {
+    it('Operaciones del Juego', () => {
 
       let variable: any;
-      variable = service.getItem(1);
+      variable = service.getItem(15);
       console.log(variable['result']);
-      expect(variable['result']).toEqual(60);
+      expect(variable['result']).toEqual(64);
       
       
     });
   });  
 
-  
+    describe('Operacion 14 Multiplicacion ', () => {
+    it('Operaciones del Juego', () => {
+
+      let variable: any;
+      variable = service.getItem(14);
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(36);
+      
+      
+    });
+  });  
+
+
+
+  describe('Operacion 13 Multiplicacion', () => {
+    it('Operaciones del Juego', () => {
+
+      let variable: any;
+      variable = service.getItem(13);
+      console.log(variable['result']);
+      expect(variable['result']).toEqual(24);
+      
+      
+    });
+  });  
+
 
 
 
