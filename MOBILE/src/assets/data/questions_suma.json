@@ -1,0 +1,90 @@
+{
+	"questions": [
+
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>5+5+8+2</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>20</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "30", "correct": false, "selected": false},
+				{"answer": "20", "correct": true, "selected": false},				
+				{"answer": "10", "correct": false, "selected": false}				
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>5+8+3+1</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>17</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "17", "correct": true, "selected": false},
+				{"answer": "21", "correct": false,  "selected": false},
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "25", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>12+20+36</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>24</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "14", "correct": false, "selected": false},				
+				{"answer": "8", "correct": false, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "68", "correct": true, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>25+15+65+2</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>107</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "107", "correct": true, "selected": false},				
+				{"answer": "8", "correct": false, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "18", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>75+4+3+12</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>94</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "60", "correct": false, "selected": false},				
+				{"answer": "8", "correct": false, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "94", "correct": true, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>12+25+36</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>73</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "60", "correct": false, "selected": false},				
+				{"answer": "73", "correct": true, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "32", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<FONT FACE='Tahoma' SIZE=36 COLOR='blue'>21+84+96</FONT>",
+			"flashCardBack": "<FONT FACE='Tahoma' SIZE=56 COLOR='blue'>197</FONT>",
+			"flashCardFlipped": false,
+			"questionText": "Answer?",
+			"answers": [
+				{"answer": "60", "correct": false, "selected": false},				
+				{"answer": "197", "correct": true, "selected": false},				
+				{"answer": "12", "correct": false, "selected": false},
+				{"answer": "84", "correct": false, "selected": false}
+			]
+		}		
+
+	]
+}

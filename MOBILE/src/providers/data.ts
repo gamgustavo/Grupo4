@@ -30,7 +30,7 @@ export class Data {
 			}
 
 		return this.http
-		.get('/../src/assets/data/questions_multiplicacion.json')
+		.get('assets/data/questions_multiplicacion.json')
 		.toPromise(); 		
 
 	}
