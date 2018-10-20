@@ -99,6 +99,9 @@ class PruebaCest
             $I->dontSeeResponseContainsJson(['titulo' => ' ']);
     }
 
+          /*PROGRAMACIÓN PAREJAS 201213062 - 201504429
+              12 / 10 / 2018
+          */
     public function testParejas1(ApiTester $I)
     {
         /**
@@ -141,6 +144,53 @@ class PruebaCest
 
     }
 
+        /*
+              PROGRAMACIÓN EN PAREJAS 201213062 - 201113759
+              19 / 10 / 2018
+        */
+
+    public function testParejas3(ApiTester $I)
+    {
+        /**
+              @Given YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE LA ACTIVIDAD HAYA SIDO INGRESADA CORRECTAMENTE
+        **/
+
+        $I->wantTo('YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE LA ACTIVIDAD HAYA SIDO INGRESADA CORRECTAMENTE Y POSEA EL NOMBRE CORRECTO');
+        /**
+              @When CUANDO INGRESO MI USUARIO Y CONTRASEÑA DE ADMINISTRADOR
+        **/
+
+        $I->amOnPage('/Devolver_Actividad/1');
+
+        /**
+            @Then NO EXISTE DESCRIPCIONES DE TAREAS VACIAS
+        **/
+        $I->seeResponseIsJson();
+        $I->dontSeeResponseContainsJson(['Nombre' => ' ']);
+
+    }
+
+
+    public function testParejas4(ApiTester $I)
+    {
+        /**
+              @Given YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE LA ACTIVIDAD HAYA SIDO INGRESADA CORRECTAMENTE
+        **/
+
+        $I->wantTo('YO COMO ADMINISTRADOR QUIERO VERIFICAR QUE LA ACTIVIDAD HAYA SIDO INGRESADA CORRECTAMENTE Y POSEA LA FECHA CORRECTA');
+        /**
+              @When CUANDO INGRESO MI USUARIO Y CONTRASEÑA DE ADMINISTRADOR
+        **/
+
+        $I->amOnPage('/Devolver_Actividad/1');
+
+        /**
+            @Then LA FECHA DE LA ACTIVIDAD NO ESTA VACÍA
+        **/
+        $I->seeResponseIsJson();
+        $I->dontSeeResponseContainsJson(['Fecha' => ' ']);
+
+    }
 
 
 
