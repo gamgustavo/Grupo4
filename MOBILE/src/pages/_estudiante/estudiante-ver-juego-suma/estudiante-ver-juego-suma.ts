@@ -37,7 +37,7 @@ export class EstudianteVerJuegoSumaPage {
 
 
     try{
-      this.dataService.loadMultiplicacion().then(
+      this.dataService.load().then(
         (res) => {
           this.questions = res['questions']
           console.log(res);

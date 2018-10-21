@@ -10,6 +10,7 @@ import { AdminAsignarMaestroPage } from '../../_admin/admin-asignar-maestro/admi
 import { AdminVerMaestrosPage } from '../../_admin/admin-ver-maestros/admin-ver-maestros';
 import { EstudianteVerJuegoPage } from '../estudiante-ver-juego/estudiante-ver-juego';
 import { EstudianteVerJuegoMultiplicacionPage } from "../estudiante-ver-juego-multiplicacion/estudiante-ver-juego-multiplicacion";
+import { EstudianteVerJuegoSumaPage } from "../estudiante-ver-juego-suma/estudiante-ver-juego-suma";
 
 /**
  * Generated class for the EstudianteHomePage page.
@@ -45,7 +46,7 @@ export class EstudianteHomePage {
       this.nav.push(EstudianteVerJuegoMultiplicacionPage);
 
     }else if(id === 5){
-      this.nav.push(EstudianteVerNotasPage);
+      this.nav.push(EstudianteVerJuegoSumaPage);
 
     }else if(id === 6){
       this.nav.push(PadreVerHorarioHijoPage);

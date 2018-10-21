@@ -2,7 +2,7 @@
 export let TRIPS = [
   {
     id: 9,
-    name: "Jugar",
+    name: "Matematicas I",
     price_adult: 30,
     price_child: 15,
     time: "6h",
@@ -58,7 +58,7 @@ export let TRIPS = [
   },
   {
     id: 4,
-    name: "Ver Horario - Estudiante",
+    name: "Matematica II",
     price_adult: 30,
     price_child: 15,
     time: "6h",
@@ -73,7 +73,7 @@ export let TRIPS = [
   }, 
   {
     id: 5,
-    name: "Ver Notas - Estudiante",
+    name: "Matematica III",
     price_adult: 30,
     price_child: 15,
     time: "6h",

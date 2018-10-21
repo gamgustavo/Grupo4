@@ -23,6 +23,30 @@ export class Data {
 
 	}
 
+	loadMateI(){
+
+			if(this.data){
+				return Promise.resolve(this.data);
+			}
+
+		return this.http
+		.get('assets/data/questions_suma.json')
+		.toPromise(); 		
+
+	}
+
+	loadSumas(){
+
+			if(this.data){
+				return Promise.resolve(this.data);
+			}
+
+		return this.http
+		.get('assets/data/questions_suma.json')
+		.toPromise(); 		
+
+	}
+
 	loadMultiplicacion(){
 
 			if(this.data){

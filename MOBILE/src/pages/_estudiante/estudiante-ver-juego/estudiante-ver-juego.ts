@@ -37,7 +37,7 @@ export class EstudianteVerJuegoPage {
 
 
     try{
-      this.dataService.load().then(
+      this.dataService.loadMateI().then(
         (res) => {
           this.questions = res['questions']
           console.log(res);
