@@ -4,6 +4,7 @@ import {} from 'jasmine';
 
 import { mathProvider } from './math';
 import { Data } from "../providers/data";
+import {ChecklistModel} from '../models/checklist-model';
 
 fdescribe('Service: mathProvider', () => {
 
@@ -191,6 +192,46 @@ function helloWorld() {
         }));
       });
     });
+  });
+
+
+this.checklists = [
+    {
+        title: 'Checklist 1',
+        items: [
+            {title: 'Task 1', checked: false},
+            {title: 'Task 2', checked: false},
+            {title: 'Task 3', checked: false}
+        ]
+    },
+    {
+        title: 'Checklist 1',
+        items: [
+            {title: 'Task 1', checked: false},
+            {title: 'Task 2', checked: false},
+            {title: 'Task 3', checked: false}
+        ]
+    },
+    {
+        title: 'Checklist 1',
+        items: [
+            {title: 'Task 1', checked: false},
+            {title: 'Task 2', checked: false},
+            {title: 'Task 3', checked: false}
+        ]
+    }
+];
+
+  describe("Dado que soy un usuairo de una calculadora",function(){
+
+    let modelo = new ChecklistModel('my checklist', this.checklist);
+    it("Cuando yo quiero realizar una operacion suma",function(){
+      expect(modelo.title).toEqual("my checklist");
+    });
+    it("Cuando yo quiero realizar una operacion suma",function(){
+      
+    });
+    
   });
 
 
