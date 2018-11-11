@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div class="container">
+
+
+        <% JSON.parse(data).forEach(function(item){ %>
+		<h2><%= item.marca %></h2>
+		<div class="card" style="width:400px">
+			<img class="card-img-top" src="<%= item.path %>" alt="Card image" style="width:100%">
+			<div class="card-body">
+			<h4 class="card-title">Marca: <%= item.linea %></h4>
+			<h4 class="card-title">Modelo: <%= item.modelo %></h4>			
+			<p class="card-text">Descripcion: <%= item.descripcion %></p>
+			<a href="/eliminar/<%= item.id %>" class="btn btn-danger">Eliminar</a>
+			</div>
+		</div>
+		<br>
+		<% }); %>
+
+
+
+		</div>		
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
